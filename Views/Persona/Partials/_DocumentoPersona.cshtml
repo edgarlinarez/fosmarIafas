@@ -1,0 +1,82 @@
+﻿<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 ">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#mdlDocumento" id="btnNuevoDocumento">
+                <i class="la la-plus mr-1"></i>Nuevo
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="tabla_documento" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hfCodPersona" value="1" />
+<input type="hidden" id="hfaction" />
+<input type="hidden" id="hfCodDocumento" />
+<!-- Modal -->
+<div class="modal fade" id="mdlDocumento" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlDocumento" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Documento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="FormularioDocumento" autocomplete="off">
+                    <div class="row justify-content-end mb-1">
+                        <div class="col-2 text-right">
+                        </div>
+                    </div>
+                    <div class="form-group d-flex">
+                        <div class="col-lg-4">
+                            <label class="required-form-label">Tipo Documento</label>
+                            <select id="cboDocumento" name="cboDocumento" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="required-form-label">Nro. Documento</label>
+                            <input id="txtNDocumento" name="txtNDocumento" class="form-control form-control-sm solonumeros" type="text">
+
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="required-form-label">Predeterminado</label>
+                            <select id="cboPrincipalDocumento" name="cboPrincipalDocumento" class="form-control form-control-sm"></select>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex">
+                        <div class="col-lg-4">
+                            <label class="required-form-label">Fecha Inscripción</label>
+                            <div class="input-group">
+                                <input id="txtFInscripcion" name="txtFInscripcion" class="form-control form-control-sm formatoFechas" type="text" required>
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <span id="msgFI" name="msgFI" style="color:red;" class="msgFI"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="required-form-label">Fecha Vencimiento</label>
+                            <div class="input-group">
+                                <input id="txtFVncmt" name="txtFVncmt" class="form-control form-control-sm fechaMayor formatoFechas" type="text">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <span id="msgFv" name="msgFv" style="color:red;" class="msgFv"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+                <button id="btnGrabarDocumento" type="button" class="btn btn-primary btn-xs">Grabar</button>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿<div class="">
+    <div class="form-row">
+        <button type="button" id="btnNuCpms" class="btn btn-primary btn-xs btn-nuevo" data-toggle="modal" data-target="#mdlBuscarCpms">
+            <i class="fa fa-plus font-weight-bold ml-1"></i> Agregar
+        </button>
+    </div>
+    <div class="form-row">
+        <table id="dtCpmsPrvdr" class="table table-striped table-bordered"></table>
+    </div>
+</div>
+<div class="modal fade" id="mdlBuscarCpms" data-backdrop="static" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlTitleCpms">Búsqueda Cpms</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <table id="dtCpms" class="table table-striped table-bordered"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-xs" id="btnGuCpms">Guardar</button>
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

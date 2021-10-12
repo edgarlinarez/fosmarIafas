@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Servicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="Grupo-tab" data-toggle="tab" href="#grupo" role="tab" aria-controls="home" aria-selected="true">Grupo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" id="Subgrupo-tab" data-toggle="tab" href="#subgrupo" role="tab" aria-controls="home" aria-selected="true">Sub-Grupo</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="Servicio-tab" data-toggle="tab" href="#servicio" role="tab" aria-controls="home" aria-selected="true">Servicio</a>
+    </li>
+</ul>
+<div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="grupo" role="tabpanel" aria-labelledby="grupo-tab">
+        <div class="row">
+            <partial name="Partials/_ListarGrupoServicio" />
+        </div>
+    </div>
+    <div class="tab-pane fade" id="subgrupo" role="tabpanel" aria-labelledby="subgrupo-tab">
+        <div class="row">
+            <partial name="Partials/_ListaSubGrupoServicio" />
+        </div>
+    </div>
+    <div class="tab-pane fade" id="servicio" role="tabpanel" aria-labelledby="servicio-tab">
+        <div class="row">
+            <partial name="Partials/_ListarServicio" />
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script asp-append-version="true" src="~/js/views/Servicio/Index.js"></script>
+}
+
+

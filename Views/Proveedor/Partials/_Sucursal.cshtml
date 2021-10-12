@@ -1,0 +1,188 @@
+﻿<div class="card">
+    <div class="card-header bg-white d-none">
+        <div class="row">
+            <div class="col-5">
+                <div class="form-row">
+                    <div class="col-12">
+                        <h6><label class="font-weight-bold mb-0">Proveedor</label></h6>
+                    </div>
+                    <div class="col-12">
+                        <h7><label id="lblPlanDscrpcn" class="font-weight-bold text-muted text-right mb-0">DATA DEMO POR FAVOR NO LA MIRES NI LA TOQUES</label></h7>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-row">
+                    <div class="col-12">
+                        <h6><label class="font-weight-bold mb-0">Sucursal</label></h6>
+                    </div>
+                    <div class="col-12">
+                        <h7><label id="lblVersionDscrpcn" class="font-weight-bold text-muted text-right mb-0">descripcion sucursal 1</label></h7>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active py-1 mr-1" id="Tbsucursal-tab" data-toggle="tab" href="#sucursal2" role="tab" aria-controls="Tbsucursal" aria-selected="true">Sucursal</a>
+                        </li>
+                        <li class="nav-item disabled">
+                            <a class="nav-link py-1" id="Tbbeneficio-tab" data-toggle="tab" href="#beneficios" role="tab" aria-controls="Tbbeneficio" aria-selected="false">Beneficio</a>
+                        </li>
+                    </ul>
+                    <hr class="dropdown-divider" />
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="sucursal2" role="tabpanel" aria-labelledby="Tbsucursal-tab">
+                            <div class="container">
+                                <div class="form-row form-group">
+                                    <div class="col-3">
+                                        <button class="btn btn-primary btn-xs" id="btnNuSucursal" data-toggle="modal" data-target="#mdlSucursal"><i class="la la-plus mr-1 font-weight-bold"></i>Nuevo Sucursal</button>
+                                    </div>
+                                </div>
+                                <div class="form-row form-group">
+                                    <table id="dtSucursal" class="table table-striped table-bordered"></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="beneficios" role="tabpanel" aria-labelledby="Tbbeneficio-tab">
+                            <partial name="Partials/_Beneficio" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mdlBuscarBeneficio" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarTelefonoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarTelefonoLabel">Busqueda Beneficio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <table id="dtBeneficio" class="table table-striped table-bordered"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-xs" id="btnGuBeneficios">Guardar</button>
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mdlSucursal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlSucursalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlSucursalLabel">Nueva Sucursal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmSucursal">
+                    <div class="container">
+                        <input type="hidden" id="hfIdSucursal" />
+                        <div class="form-row form-group">
+                            <div class="col-6">
+                                <span>Proveedor</span>
+                                <input type="text" name="txtDatoProveedor" class="form-control form-control-sm disabled text-uppercase alfanumerico" value="Nombre o Razon Social de Proveedor" readonly="readonly">
+                            </div>
+                            <div class="col-6">
+                                <div class="form-row justify-content-end">
+                                    <div class="col-6">
+                                        <span>Predeterminado</span>
+                                        <select id="cboPrdtrmndoScrsl" name="cboPrdtrmndoScrsl" class="form-control form-control-sm disabled"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-6">
+                                <span>Descripción</span>
+                                <input type="text" id="txtDescripcionScrsl" name="txtDescripcionScrsl" class="form-control form-control-sm disabled text-uppercase alfanumerico" maxlength="150">
+                            </div>
+                            <div class="col-6">
+                                <span>Abreviatura</span>
+                                <input type="text" id="txtAbrvtraScrsl" name="txtAbrvtraScrsl" class="form-control form-control-sm disabled text-uppercase alfanumerico" maxlength="150">
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-6">
+                                <span>Dirección</span>
+                                <input type="text" id="txtDireccionScrsl" name="txtDireccionScrsl" class="form-control form-control-sm disabled text-uppercase alfaNumCharEsp" maxlength="150" />
+                            </div>
+                            <div class="col-6">
+                                <span>Referencia</span>
+                                <input id="txtReferenciaScrsl" name="txtReferenciaScrsl" class="form-control form-control-sm disabled text-uppercase alfanumerico" maxlength="150" />
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-4">
+                                <span>Departamento</span>
+                                <select id="cboDepartamento" name="cboDepartamento" class="form-control form-control-sm disabled"></select>
+                            </div>
+                            <div class="col-4">
+                                <span>Provincia</span>
+                                <select id="cboProvincia" name="cboProvincia" class="form-control form-control-sm disabled"></select>
+                            </div>
+                            <div class="col-4">
+                                <span>Distrito</span>
+                                <select id="cboDistrito" name="cboDistrito" class="form-control form-control-sm disabled"></select>
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-3">
+                                <span>Nro. Registro SUSALUD</span>
+                                <input type="text" id="txtNRegistroSusalud" name="txtNRegistroSusalud" class="form-control form-control-sm disabled solonumeros" maxlength="20">
+                            </div>
+                            <div class="col-6">
+                                <div class="form-row justify-content-end rngFechasSUSALUD">
+                                    <div class="col-6">
+                                        <span>Fe. Inicio de Vigencia</span>
+                                        <div class="input-group input-group-sm">
+                                            <input id="txtfinivigencia" name="txtfinivigencia" class="form-control dpRngSSLD " type="text">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text px-2"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>Fe. Fin de Vigencia</span>
+                                        <div class="input-group input-group-sm">
+                                            <input id="txtffinvigencia" name="txtffinvigencia" class="form-control dpRngSSLD " type="text">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text px-2"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <span>Impresión de Carta</span>
+                                <select id="cboImpCarta" name="cboImpCarta" class="form-control form-control-sm disabled"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-xs" id="btnGuSucursal">Guardar</button>
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hfactionSucursal" />

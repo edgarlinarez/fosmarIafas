@@ -1,0 +1,67 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <label id="lblGrupo" class=""></label>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 ">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#mdlSubGrupo" id="btnNuevoSubGrupo">
+                <i class="la la-plus mr-1"></i>Nuevo
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="tabla_SubGrupo" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hfSubGrupo" />
+<input type="hidden" id="hfCodSubGrupo" />
+
+<div class="modal fade" id="mdlSubGrupo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-spanledby="mdlSubGrupo" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalspan">Agregar Sub-Grupo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-span="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="FormularioSubGrupo" autocomplete="off">
+                    <div class="col-12">
+                        <div class="form-group d-flex  justify-content-end mb-1">
+                            <div class="col-2 text-right">
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <div class="col-lg-4">
+                                <span class="required-form-span">Código</span>
+                                <input id="txtCodigosub" name="txtCodigosub" class="form-control form-control-sm disabled" type="text" maxlength="5" readonly="readonly" />
+                            </div>
+                            <div class="col-lg-8">
+                                <span class="required-form-span">Descripción </span>
+                                <input id="txtDescripcionsub" name="txtDescripcionsub" class="form-control form-control-sm text-uppercase alfaNumCharEsp" required maxlength="40" type="text">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-8">
+                                <span class="required-form-span">Abreviatura </span>
+                                <input id="txtAbreviaturasub" name="txtAbreviaturasub" class="form-control form-control-sm text-uppercase alfaNumCharEsp" required maxlength="40" type="text">
+                            </div>
+                        </div>
+                        <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+
+                <button id="btnGrabarSubGrupo" type="button" class="btn btn-primary btn-xs">Grabar</button>
+
+            </div>
+        </div>
+    </div>
+</div>

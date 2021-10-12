@@ -1,0 +1,180 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 ">
+            <button type="button" class="btn btn-primary btn-xs d-none" data-toggle="modal" data-target="#mdlGrado" id="btnNuevoGrado">
+                <i class="la la-plus mr-1"></i>Nuevo
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="tabla_grado" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="hfCodPersona" />
+<input type="hidden" id="hfactionGrado" />
+<input type="hidden" id="hfCodGrado" />
+
+<!-- Modal -->
+<div class="modal fade" id="mdlGrado" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlGrado" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="FormularioGrado">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-lg-3">
+                                <label class="required-form-label">Tipo de Relación </label>
+                                <select id="cboTRelaccion" name="cboTRelaccion" class="form-control form-control-sm" style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label class="required-form-label">Situaci&oacute;n Militar </label>
+                                <select id="cboSMilitar" name="cboSMilitar" class="form-control form-control-sm" style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-4 input-tiempo-servicio">
+                                <label class="required-form-label">Tiempo de Servicio</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="text" id="txtTServicio" name="txtTServicio" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row inputs-fechas-todas">
+                            <div class="col-lg-3 input-fecha-ingreso">
+                                <label class="required-form-label">Fecha de Ingreso </label>
+                                <div class="input-group">
+                                    <input class="form-control form-control-sm valid formatoFechas" id="txtFIngreso" name="txtFIngreso" type="text" aria-invalid="false" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="mgrd0" style="color:red;" class="mgrd0"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 input-fecha-disponibilidad">
+                                <label class="required-form-label">Fecha de Disponibilidad </label>
+                                <div class="input-group">
+                                    <input id="txtFDisponibilidad" name="txtFDisponibilidad" class="form-control form-control-sm valid formatoFechas" type="text" aria-invalid="false" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="mgrd1" style="color:red;" class="mgrd1"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 input-fecha-termino">
+                                <label class="required-form-label">Fecha T&eacute;rmino de Disp.</label>
+                                <div class="input-group">
+                                    <input id="txtFTermino" name="txtFTermino" class="form-control form-control-sm valid formatoFechas" type="text" aria-invalid="false" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="mgrd2" style="color:red;" class="mgrd2"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 input-fecha-baja">
+                                <label class="required-form-label">Fecha de Baja </label>
+                                <div class="input-group">
+                                    <input id="txtFBaja" name="txtFBaja" class="form-control form-control-sm valid formatoFechas" type="text" aria-invalid="false" autocomplete="off">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="mgrd3" style="color:red;" class="mgrd3"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row row-persona-naval">
+                            <div class="col-lg-3 input-causal">
+                                <label class="required-form-label">Motivo de Baja</label>
+                                <select id="cboCBaja" name="cboCBaja" class="form-control form-control-sm " style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-3 input-afeccion">
+                                <label class="required-form-label">Causal de Baja</label>
+                                <select id="cboTAfeccion" name="cboTAfeccion" class="form-control form-control-sm" style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-4 input-disponibilidad">
+                                <label class="required-form-label">Motivo Disponibilidad</label>
+                                <select id="cboMDisponibilidad" name="cboMDisponibilidad" class="form-control form-control-sm " style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-3 input-grado">
+                                <label class="required-form-label">Grado</label>
+                                <select id="cboGrado" name="cboGrado" class="form-control form-control-sm" style="width:100%"></select>
+                            </div>
+                            <div class="col-lg-3 input-especialidad">
+                                <label class="required-form-label">Especialidad </label>
+                                <select id="cboEspecialidad" name="cboEspecialidad" class="form-control form-control-sm" style="width:100%">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-3">
+                                <label class="required-form-label">Vínculo de Persona</label>
+                                <select id="cboTPersonaGrado" name="cboTPersonaGrado" class="form-control form-control-sm select-grado-tipo-persona" style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-3">
+                                <label class="required-form-label">Unidad de Pago</label>
+                                <select id="cboUpago" name="cboUpago" class="form-control form-control-sm" style="width:100%"></select>
+                            </div>
+                            <div class="col-lg-3 input-discapacidad">
+                                <label class="required-form-label">Tipo de Discapacidad </label>
+                                <select id="cboInterdicto" name="cboInterdicto" class="form-control form-control-sm " style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-3 input-discapacidad">
+                                <label class="required-form-label">Diagn&oacute;stico </label>
+                                <select id="cboDiagnostico" name="cboDiagnostico" class="form-control form-control-sm text-uppercase alfaNumCharEsp" style="width:100%">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-3 input-discapacidad">
+                                <label class="required-form-label">N&uacute;mero Certificado </label>
+                                <div class="input-group">
+                                    <input id="txtNCertificado" name="txtNCertificado" class="form-control form-control-sm valid input-vinculo text-uppercase alfaNumCharEsp" type="text" aria-invalid="false">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 input-discapacidad">
+                                <label class="required-form-label">Fecha Certificado </label>
+                                <div class="input-group">
+                                    <input id="txtFCertificado" name="txtFCertificado" class="form-control form-control-sm valid input-vinculo formatoFechas" type="text" aria-invalid="false">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 input-afiliable">
+                                <label class="required-form-label">Afiliable </label>
+                                <select id="cboAfiliable" name="cboAfiliable" class="form-control form-control-sm " style="width:100%">
+                                </select>
+                            </div>
+                            <div class="col-lg-3 input-pensionable">
+                                <label class="required-form-label">Pensionable </label>
+                                <select id="cboPensionable" name="cboPensionable" class="form-control form-control-sm" style="width:100%">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+                <button id="btnGrabarGrado" type="button" class="btn btn-primary btn-xs">Grabar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

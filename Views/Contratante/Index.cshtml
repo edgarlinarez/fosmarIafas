@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Contratante";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <link asp-append-version="true" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+}
+
+<partial name="Partials/_ControlesPartial" model="@(ControlesVistas.VistaContratante)" />
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="Lista-tab" data-toggle="tab" href="#listar" role="tab" aria-controls="home" aria-selected="true">Listado Contratante</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" id="DatosGenerales-tab" data-toggle="tab" href="#datosgenerales" role="tab" aria-controls="home" aria-selected="true">Datos Contratante</a>
+    </li>
+</ul>
+<div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="listar" role="tabpanel" aria-labelledby="Lista-tab">
+        <div class="row">
+            <partial name="Partials/_ListarContratante" />
+        </div>
+    </div>
+    <div class="tab-pane fade" id="datosgenerales" role="tabpanel" aria-labelledby="DatosGenerales-tab">
+        <div class="row">
+            <partial name="Partials/_AgregarContratante" />
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script asp-append-version="true" src="~/js/views/Contratante/Index.js"></script>
+}
+
+

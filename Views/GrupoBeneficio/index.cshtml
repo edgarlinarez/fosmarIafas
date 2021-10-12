@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Grupo Beneficio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <button type="button" class="btn btn-primary btn-xs btn-nuevo" data-toggle="modal" data-target="#mdlGrupoBeneficio"><i class="la la-plus mr-1"></i>Nuevo</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="tabla_GrupoBenefico" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+<partial name="Partials/_ModalGrupoBeneficio" />
+<input type="hidden" id="hfGrupoBeneficio" />
+
+@section Scripts{
+    <script asp-append-version="true" src="~/js/views/GrupoBeneficio/index.js"></script>
+}

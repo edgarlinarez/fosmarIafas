@@ -1,0 +1,48 @@
+﻿@inject FOSMAR.Negocios.General.Seguridad.IPerfilObjetoProxy _perfilObjetoProxy
+<div class="sidebar-menu">
+    <div class="sidebar-header">
+        <div class="logo">
+            <a href="/"><img src="~/assets/css/themes/@FOSMAR.CONFIG.ConfiguracionProyecto.TEMA/img/logo.svg" alt="logo"></a>
+        </div>
+    </div>
+    <div class="main-menu">
+        <div class="menu-inner">
+            <nav>
+                @{
+                    var idModulo = FOSMAR.CONFIG.ConfiguracionProyecto.MODULOS.Persona;
+                    var menu = await _perfilObjetoProxy.ListarMenu(idModulo, User.ObtenerPerfiles());
+                }
+                <ul class="metismenu" id="menu">
+                    <li class="@ViewContext.IsActiveRoute("/")">
+                        <a asp-controller="Home" asp-action="Index">
+                            <i class="ti-home"></i><span>INICIO</span>
+                        </a>
+                    </li>
+                    @foreach (var item in menu.Where(x => x.IDPDRE == idModulo && x.TIPO == 2))
+                    {
+                        var itemhijos = menu.Where(x => x.IDPDRE == item.ID.ToString() && x.TIPO == 3);
+                        var urls = (itemhijos != null && itemhijos.Count() > 0) ? itemhijos.Select(x => x.URL) : null;
+
+                        <li class="@(string.IsNullOrEmpty(item.URL)?ViewContext.IsActiveRoute(urls):ViewContext.IsActiveRoute(item.URL))">
+                            <a href="@(string.IsNullOrEmpty(item.URL)?"javascript:void(0)":item.URL)">
+                                <i class="fa fa-dot"></i>
+                                <span>@item.NMBRE</span>
+                            </a>
+                            @if (itemhijos != null && itemhijos.Count() > 0)
+                            {
+                                <ul class="collapse">
+                                    @foreach (var hijos in itemhijos)
+                                    {
+                                        <li class="@ViewContext.IsActiveRoute(hijos.URL)">
+                                            <a href="@hijos.URL">@hijos.NMBRE</a>
+                                        </li>
+                                    }
+                                </ul>
+                            }
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

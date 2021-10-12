@@ -1,0 +1,79 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-6 6 pt-2">
+            <h5>Por Sexo/Edad</h5>
+        </div>
+        <div class="col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 offset-md-5 text-right">
+                    <button id="btnNuCostoEtario" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#mdlCostoEtario">
+                       <i class="fa fa-plus mr-1"></i> Nuevo Costo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="dropdown-divider bg-warning mt-1 mb-3">
+    <div class="form-row">
+        <table id="dtCostoEtario" class="table table-striped table-bordered"></table>
+    </div>
+</div>
+
+<div class="modal fade" id="mdlCostoEtario" data-backdrop="static" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="titleCostoEtario">Nuevo Costo</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="frmCostoEtario" autocomplete="off">
+                    <div class="container">
+                        <div class="form-row">
+                            <div class="col-lg-4 form-group">
+                                <span>Id Costo</span>
+                                <input type="hidden" id="hfIdCostoEtario">
+                                <input type="text" id="txtCostoEtario" class="form-control form-control-sm disabled" readonly="readonly">
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <span>Sexo</span>
+                                <select id="cboSexoCostoEtario" name="cboSexoCostoEtario" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <span>Edad Límite</span>
+                                <div class="input-group input-group-sm">
+                                    <input type="number" id="txtEdadLimite" name="txtEdadLimite" class="form-control form-control-sm text-right pr-1 solonumeros" min="0" max="115" step="1" placeholder="0">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Años</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="col-lg-4 form-group">
+                                <span>Afiliado</span>
+                                <input type="number" id="txtAfiliado" name="txtAfiliado" class="form-control form-control-sm text-right pr-1 numeroDecimal" min="0" max="9999999" step="0.01" maxlength="7" placeholder="0.00">
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <span>Empresa</span>
+                                <input type="number" id="txtEmpresa" name="txtEmpresa" class="form-control form-control-sm text-right pr-1 numeroDecimal" min="0" max="9999999" step="0.01" maxlength="7" placeholder="0.00">
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <span>Total</span>
+                                <input type="number" id="txtTotal" name="txtTotal" class="form-control form-control-sm text-right pr-1 numeroDecimal"  min="0" max="9999999" step="0.01" maxlength="7" placeholder="0.00" readonly="">
+                            </div>
+                        </div>
+                        <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+                <button id="btnGuCostoEtario" type="button" class="btn btn-primary btn-xs">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

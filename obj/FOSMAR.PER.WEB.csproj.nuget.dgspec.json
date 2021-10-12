@@ -1,0 +1,998 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.PER.WEB\\FOSMAR.PER.WEB.csproj": {}
+  },
+  "projects": {
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CONFIG\\FOSMAR.CONFIG.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CONFIG\\FOSMAR.CONFIG.csproj",
+        "projectName": "FOSMAR.CONFIG",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CONFIG\\FOSMAR.CONFIG.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CONFIG\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj",
+        "projectName": "FOSMAR.CORE",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.TagHelpers": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.ENTIDADES\\FOSMAR.ENTIDADES.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.ENTIDADES\\FOSMAR.ENTIDADES.csproj",
+        "projectName": "FOSMAR.ENTIDADES",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.ENTIDADES\\FOSMAR.ENTIDADES.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.ENTIDADES\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Aseguramiento\\FOSMAR.Negocios.Aseguramiento.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Aseguramiento\\FOSMAR.Negocios.Aseguramiento.csproj",
+        "projectName": "FOSMAR.Negocios.Aseguramiento",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Aseguramiento\\FOSMAR.Negocios.Aseguramiento.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Aseguramiento\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj",
+        "projectName": "FOSMAR.Negocios.Config",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.General.Seguridad\\FOSMAR.Negocios.General.Seguridad.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.General.Seguridad\\FOSMAR.Negocios.General.Seguridad.csproj",
+        "projectName": "FOSMAR.Negocios.General.Seguridad",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.General.Seguridad\\FOSMAR.Negocios.General.Seguridad.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.General.Seguridad\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj",
+        "projectName": "FOSMAR.Negocios.Modelos",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Persona\\FOSMAR.Negocios.Persona.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Persona\\FOSMAR.Negocios.Persona.csproj",
+        "projectName": "FOSMAR.Negocios.Persona",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Persona\\FOSMAR.Negocios.Persona.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Persona\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Sunat\\FOSMAR.Negocios.Sunat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Sunat\\FOSMAR.Negocios.Sunat.csproj",
+        "projectName": "FOSMAR.Negocios.Sunat",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Sunat\\FOSMAR.Negocios.Sunat.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Sunat\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.SuSalud\\FOSMAR.Negocios.SuSalud.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.SuSalud\\FOSMAR.Negocios.SuSalud.csproj",
+        "projectName": "FOSMAR.Negocios.SuSalud",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.SuSalud\\FOSMAR.Negocios.SuSalud.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.SuSalud\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.PER.WEB\\FOSMAR.PER.WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.PER.WEB\\FOSMAR.PER.WEB.csproj",
+        "projectName": "FOSMAR.PER.WEB",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.PER.WEB\\FOSMAR.PER.WEB.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.PER.WEB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CONFIG\\FOSMAR.CONFIG.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CONFIG\\FOSMAR.CONFIG.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.ENTIDADES\\FOSMAR.ENTIDADES.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.ENTIDADES\\FOSMAR.ENTIDADES.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Aseguramiento\\FOSMAR.Negocios.Aseguramiento.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Aseguramiento\\FOSMAR.Negocios.Aseguramiento.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Config\\FOSMAR.Negocios.Config.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.General.Seguridad\\FOSMAR.Negocios.General.Seguridad.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.General.Seguridad\\FOSMAR.Negocios.General.Seguridad.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Modelos\\FOSMAR.Negocios.Modelos.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Persona\\FOSMAR.Negocios.Persona.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Persona\\FOSMAR.Negocios.Persona.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Sunat\\FOSMAR.Negocios.Sunat.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.Sunat\\FOSMAR.Negocios.Sunat.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.SuSalud\\FOSMAR.Negocios.SuSalud.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.Negocios.SuSalud\\FOSMAR.Negocios.SuSalud.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj"
+              },
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Apache.NMS": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Apache.NMS.ActiveMQ": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.95.4, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.11, )"
+            },
+            "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj",
+        "projectName": "Sunat",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\Sunat.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\Sunat\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj",
+        "projectName": "SuSalud",
+        "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\SuSalud.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\SuSalud\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj": {
+                "projectPath": "D:\\Cepheid\\FOSMAR\\FOSMAR.WEB.API\\FOSMAR.CORE\\FOSMAR.CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[4.4.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

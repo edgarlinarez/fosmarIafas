@@ -1,0 +1,96 @@
+﻿<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 px-0">
+            <form id="FormularioBeneficio" autocomplete="off">
+                <div class="modal-header mb-3">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Beneficio</h5>
+                </div>
+                <div class="container">
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <span class="required-form-span"> Código </span>
+                            <input id="txtCodigo" name="txtCodigo" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="45">
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span"> Descripción </span>
+                            <input id="txtDescripcion" name="txtDescripcion" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="150">
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span"> Abreviatura </span>
+                            <input id="txtAbreviatura" name="txtAbreviatura" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="150">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <span class="required-form-span">Tipo Prestación</span>
+                            <select id="cboTPrestacion" name="cboTPrestacion" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span">Detalle Beneficio</span>
+                            <select id="cboDBeneficio" name="cboDBeneficio" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span">Tipo Cobertura SITEDS</span>
+                            <select id="cboTCSiteds" name="cboTCSiteds" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <span class="required-form-span">Codigo SITEDS</span>
+                            <input id="txtCSiteds" name="txtCSiteds" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="15">
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span">Tipo Gasto de Prestación</span>
+                            <select id="cboTGPrestacion" name="cboTGPrestacion" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span">Codigo Grupo Beneficio</span>
+                            <select id="cboCGBeneficio" name="cboCGBeneficio" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <span class="required-form-span">Obligatoriedad</span>
+                            <select id="cboObligatoriedad" name="cboObligatoriedad" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span">Indicador CG</span>
+                            <select id="cboICG" name="cboICG" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="col form-group">
+                            <span class="required-form-span">Genero</span>
+                            <select id="cboGenero" name="cboGenero" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-4 form-group">
+                            <span class="required-form-span">Indicador Internamiento</span>
+                            <select id="cboIInternamiento" name="cboIInternamiento" class="form-control form-control-sm"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-right px-1">
+                    <button id="btnGrabarBeneficio" type="button" class="btn btn-primary btn-xs">Grabar</button>
+                </div>
+                <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+            </form>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hfactionBeneficio" />
+
+
+
+
+
+
+
+

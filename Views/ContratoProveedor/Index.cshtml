@@ -1,0 +1,266 @@
+﻿@{
+    ViewData["Title"] = "Contrato Proveedor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ul class="nav nav-tabs" id="tabContratoProveedor" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="Lista-tab" href="#listar" data-toggle="tab" role="tab">Lista de Contratos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="Datos-tab" href="#contrato" data-toggle="tab" role="tab">Datos de Contrato</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="Acuerdos-tab" href="#acuerdos" data-toggle="tab" role="tab">Acuerdos de Contrato</a>
+    </li>
+</ul>
+<div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="listar" role="tabpanel">
+        <partial name="Partials/_ListaContratoProveedor" />
+    </div>
+    <div class="tab-pane fade" id="contrato" role="tabpanel">
+        <partial name="Partials/_AgregarContratoProveedor" />
+    </div>
+    <div class="tab-pane fade" id="acuerdos" role="tabpanel">
+        <div class="container">
+            <ul class="nav nav-pills" id="tabAcuerdos">
+                <li class="nav-item">
+                    <a class="nav-link active py-1 px-3 mr-1" id="listaAcuerdos-tab" href="#listaAcuerdos" data-toggle="tab" role="tab">Acuerdos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-1 px-3 mr-1" id="sucursal-tab" href="#sucursal" data-toggle="tab" role="tab">Tarifas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-1 px-3" id="beneficios-tab" href="#coberturas" data-toggle="tab" role="tab">Coberturas</a>
+                </li>
+            </ul>
+            <hr class="dropdown-divider mb-2">
+            <div class="tab-content" id="acuerdos-tabContent">
+                <div class="tab-pane fade show active" id="listaAcuerdos" role="tabpanel">
+                    <form id="frmAcuerdoDet" autocomplete="off">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 form-group">
+                                    <h5>Acuerdos por Sucursal</h5>
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <div class="row">
+                                        <div class="col-lg-7 offset-md-5 text-right">
+                                            <button type="button" id="btnNuAcuerdoScrsl" class="btn btn-primary btn-xs">Nuevo Acuerdo</button>
+                                            <button type="button" id="btnGuAcuerdoScrsl" class="btn btn-primary btn-xs">Guardar</button>
+                                            <button type="button" id="btnCanAcuerdoScrsl" class="btn btn-secondary btn-xs">Cancelar</button>
+                                            <button type="button" id="btnEditAcuerdoScrsl" class="btn btn-primary btn-xs d-none">Editar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-row form-group">
+                                        <div class="col-lg-6">
+                                            <span>Nro. Contrato</span>
+                                            <input type="text" name="txtNumContrato" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <span>Número de Versión</span>
+                                            <input type="text" name="txtNumVersion" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-row form-group">
+                                        <div class="col-6">
+                                            <span>Tarifario</span>
+                                            <select id="cboSelecTarifario" name="cboSelecTarifario" class="form-control form-control-sm"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-lg-6">
+                                    <div class="form-row form-group">
+                                        <div class="col-lg-2">
+                                            <span>Código</span>
+                                            <input type="text" name="txtDtoIdProveedor" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <span>Proveedor</span>
+                                            <input type="text" name="txtDtoProveedor" class="form-control form-control-sm disabled" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-row form-group">
+                                        <div class="col-lg-2">
+                                            <span>Código</span>
+                                            <input type="text" id="txtIdSucursalDAcuerdo" name="txtIdSucursalDAcuerdo" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                                        </div>
+                                        <div class="col-lg-10">
+                                            <span>Sucursal</span>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" id="txtSucursalDAcuerdo" name="txtSucursalDAcuerdo" class="form-control form-control-sm disabled" readonly="readonly">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-secondary px-2 form-control-sm" type="button" id="btnMdlSucursal" data-toggle="modal" data-target="#mdlSucursalProveedor" disabled="disabled">
+                                                        <i class="fa fa-search "></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row form-group d-none">
+                                <div class="col-12">
+                                    <span>Tarifario</span>
+                                    <select id="cboSelecTarifario" name="cboSelecTarifario" class="form-control form-control-sm"></select>
+                                </div>
+                            </div>
+                            @*</div>*@
+
+                            <div class="col-lg-6 d-none">
+                                <input type="hidden" name="ID" disabled="disabled" value="">
+                                <div class="row d-flex">
+                                    <div class="col-lg-6 form-group">
+                                        <span class="required-form-span">Estado</span>
+                                        <select class="form-control form-control-sm select-estados" name="GDESTDO" placeholder="Estado" required="" disabled="disabled"><option value="">Seleccione</option><option value="A">ACTIVO</option><option value="I">INACTIVO</option></select>
+                                    </div>
+                                    <div class="col-lg-6 form-group">
+                                        <span class="required-form-span">F. Estado</span>
+                                        <input type="text" class="form-control form-control-sm" name="cFESTDO" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="row d-flex">
+                                    <div class="col-lg-6 form-group">
+                                        <span class="required-form-span">U. Creación</span>
+                                        <input type="text" class="form-control form-control-sm" name="UCRCN" disabled="disabled">
+                                    </div>
+                                    <div class="col-lg-6 form-group">
+                                        <span class="required-form-span">F. Creación</span>
+                                        <input type="text" class="form-control form-control-sm" name="cFCRCN" disabled="disabled">
+                                    </div>
+                                </div>
+                                <div class="row form-group d-flex">
+                                    <div class="col-lg-6 form-group">
+                                        <span class="required-form-span">U. Edición</span>
+                                        <input type="text" class="form-control form-control-sm" name="UEDCN" disabled="disabled">
+                                    </div>
+                                    <div class="col-lg-6 form-group">
+                                        <span class="required-form-span">F. Edición</span>
+                                        <input type="text" class="form-control form-control-sm" name="cFEDCN" disabled="disabled">
+                                    </div>
+                                </div>
+                            </div>
+                            <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+                            <hr class="dropdown-divider bg-warning mt-1 mb-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table id="dtAcuerdos" class="table table-striped table-bordered"></table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="tab-pane fade show" id="sucursal" role="tabpanel">
+                    <partial name="Partials/_Sucursal" />
+                </div>
+                <div class="tab-pane fade" id="coberturas" role="tabpanel">
+                    <partial name="Partials/_Coberturas" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hfIdVersion" />
+<input type="hidden" id="hfactionContratoProveedor" />
+<input type="hidden" id="hfIdProveedor" />
+<input type="hidden" id="hfProveedor" /> @*Proveedor*@
+<input type="hidden" id="hfDtoProveedor" />
+<input type="hidden" id="hfIdSucursal" />
+<input type="hidden" id="hfactAcuerdoSucursal" />
+<input type="hidden" id="hfIdAcuerdo" />
+<input type="hidden" id="hfcboTarifario" />
+<input type="hidden" id="hfIdSucursal" />
+<input type="hidden" id="hfDatoTarifario" />
+@*07.07*@
+<input type="hidden" id="hfIfcntrto" />
+
+
+<partial name="Partials/_ModalProveedor" />
+<partial name="Partials/_ModalSucursal" />
+<partial name="Partials/_ModalProcedimientos" />
+
+<div class="modal fade" id="mdlBeneficioScrsl" data-backdrop="static" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlVDTitle">Beneficios</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="form-row form-group">
+                        <table id="dtBeneficioSrcl" class="table table-striped table-bordered"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+                @*<button type="button" class="btn btn-primary btn-xs">Guardar</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mdlFiniquitoVersion" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Finiquitar Versión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form id="frmFiniquito">
+                        <div class="row">
+                            <div class="col form-group">
+                                <span>Fecha Finiquito</span>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-checkbox px-2 py-0">
+                                                    <input type="checkbox" id="chkFFiniquito" name="chkFFiniquito" class="custom-control-input">
+                                                    <label class="custom-control-label" for="chkFFiniquito"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input id="txtFFiniquito" name="txtFFiniquito" class="form-control formatoFechas" type="text">
+                                    <div class="input-group-append">
+                                        <button type="button" id="btnFFiniquito" class="btn btn-xs px-2">
+                                            <i class="fa fa-calendar"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+                <button type="button" id="btnGuFiniquito" class="btn btn-primary btn-xs">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @*<script src="https://cdnjs.cloudflare.com/ajax/libs/bs-custom-file-input/1.1.1/bs-custom-file-input.min.js"></script>*@
+    <script src="~/assets/js/bs-custom-file-input.min.js"></script>
+    <script asp-append-version="true" src="~/js/views/ContratoProveedor/index.js"></script>
+}

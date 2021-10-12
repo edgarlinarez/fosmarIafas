@@ -1,0 +1,56 @@
+﻿<form id="FormularioServicio" autocomplete="off">
+    <div class="form-row">
+        @*<div class="col-lg-4">
+            <span class="required-form-span"> codigo </span>
+            <input id="txtCodigoServicio" name="txtCodigoServicio" class="form-control form-control-sm text-uppercase disabled" readonly="readonly" type="text" maxlength="100" >
+        </div>*@
+        <div class="col-6 form-group">
+            <span class="required-form-span"> Descripción </span>
+            <input id="txtDescripcionServicio" name="txtDescripcionServicio" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="100">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-6 form-group">
+            <span class="required-form-span"> Abreviatura </span>
+            <input id="txtAbreviaturaServicio" name="txtAbreviaturaServicio" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="100">
+        </div>
+        <div class="col-6 form-group">
+            <span class="required-form-span"> Sub-Grupo</span>
+            <div class="input-group input-group-sm">
+                <input type="text" id="txtSubservicio"  name="txtSubservicio" class="form-control form-control-sm disabled" readonly="readonly" />
+                <div class="input-group-append">
+                    <button class="btn btn-secondary px-2" type="button" id="btnmdlSubservicio" data-toggle="modal" data-target="#mdlBuscarSubServicio">
+                        <i class="fa fa-search "></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="col text-right px-1">
+        <button id="btnGrabarServicio" type="button" class="btn btn-primary btn-xs">Guardar</button>
+    </div>
+    <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />
+</form>
+<div class="modal fade" id="mdlBuscarSubServicio" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarSubServicio" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarServcio">Búsqueda de Sub-Grupo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <table id="dtSubservicio" class="table table-striped table-bordered"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

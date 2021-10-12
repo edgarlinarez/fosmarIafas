@@ -1,0 +1,95 @@
+﻿@model int?
+@{
+    if (@Model > 0)
+    {
+        ViewData["Title"] = "Editar SOLICITUD DE SUSCRIPCIÓN";
+        ViewData["Breadcrumbs"] = new[] {
+        new BreadcrumbViewData{ Name = "Lista de Solicitudes de Suscripción",Action ="Index",  Controller="solicitudsuscripcion"  },
+        new BreadcrumbViewData{ Name = "Editar" }
+    };
+    }
+    else
+    {
+        ViewData["Title"] = "Agregar SOLICITUD DE SUSCRIPCIÓN";
+        ViewData["Breadcrumbs"] = new[] {
+        new BreadcrumbViewData{ Name = "Lista de Solicitudes de Suscripción",Action ="Index",  Controller="solicitudsuscripcion"  },
+        new BreadcrumbViewData{ Name = "Agregar" }
+    };
+    }
+}
+<partial name="Partials/_ControlesPartial" model="@(ControlesVistas.VistaSolicitudSuscripcion)" />
+
+<div class="container">
+
+    <input type="hidden" id="IdSolicitud" value="@(Model.HasValue ? Model.Value.ToString():" ")" />
+    <input type="hidden" id="action" name="action" />
+
+    <form action="/" method="post" id="frmSolicitud">
+        <div class="row align-items-end">
+            <div class="form-group  col-lg-2 col-sm-6">
+                <label class="required-form-label">Número de Solicitud</label>
+                <input type="text" class="form-control form-control-sm" name="ID-d" readonly required>
+            </div>
+            <div class="form-group  col-lg-4 col-sm-6">
+                <label class="required-form-label">¿Cómo se enteró?</label>
+                <select class="form-control form-control-sm" id="GDCCMNCCN" name="GDCCMNCCN" required></select>
+            </div>
+            <div class="form-group  col-lg-4 col-sm-6">
+                <label class="required-form-label">Contratante</label>
+                <select class="form-control form-control-sm" id="IDCNTRTNTE" name="IDCNTRTNTE" required></select>
+            </div>
+            <div class="form-group  col-lg-2 col-sm-6">
+                <label class="required-form-label">Modalidad de Pago</label>
+                <select class="form-control form-control-sm" id="GDMPGO" name="GDMPGO" required></select>
+            </div>
+            <div class="form-group  col-lg-3 col-sm-6">
+                <label class="required-form-label">Motivo</label>
+                <select class="form-control form-control-sm" id="GDMPLZA" name="GDMPLZA" required></select>
+            </div>
+            <div class="form-group  col-lg-3 col-sm-6">
+                <label class="required-form-label">Tipo de Producto</label>
+                <select class="form-control form-control-sm" id="GDTPRDCTO" name="GDTPRDCTO" required></select>
+            </div>
+            <div class="form-group  col-lg-3 col-sm-6">
+                <label class="required-form-label">Unidad de Pago</label>
+                <select class="form-control form-control-sm" id="GDUPGO" name="GDUPGO" required></select>
+            </div>
+            <div class="form-group col-lg-3 col-sm-6 text-right">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="IDSCNTO" name="IDSCNTO">
+                    <label class="form-check-label" for="IDSCNTO">
+                        Indicador por Descuento
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />
+        <hr />
+        <div class="row align-items-center">
+            <div class="col-8">
+                <h5 class="required-form-label">Datos de Persona</h5>
+            </div>
+            <div class="col-4 text-right">
+                <button type="button" class="btn btn-info btn-xs buscar-persona" data-toggle="modal" data-target="#modal_buscar_persona" title="Buscar Persona"><span><i class="la la-search"></i> Buscar Persona</span></button>
+            </div>
+        </div>
+        <div class="row">
+            <partial name="Partials/_ModalListaSerie" />
+        </div>
+        <hr />
+        <div class="row">
+            <div class="form-group col-6">
+                <a class="btn btn-secondary btn-xs btn-block" asp-controller="solicitudsuscripcion" asp-action="Index">
+                    <i class="la la-arrow-left mr-1"></i>Regresar
+                </a>
+            </div>
+            <div class="form-group col-6 text-right">
+                <button id="btnGuardar" type="button" class="btn btn-primary btn-xs btn-block"><i class="la la-save mr-1"></i>Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts{
+<script src="~/js/views/solicitud-suscripcion/Solicitud.js" asp-append-version="true"></script>
+}

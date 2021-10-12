@@ -1,0 +1,178 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-lg-6 form-group">
+            <h5>Datos de Coberturas</h5>
+        </div>
+        <div class="col-lg-6 form-group">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 offset-md-5 text-right">
+                    <button type="button" id="btnNuCobertura" class="btn btn-primary btn-xs">Nuevo</button>
+                    <button type="button" id="btnGuCobertura" class="btn btn-primary btn-xs">Guardar</button>
+                    <button type="button" id="btnCanCobertura" class="btn btn-secondary btn-xs">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="container">*@
+        <form id="frmCoberturas" autocomplete="off">
+            <div class="form-row">
+                <div class="col-lg-6">
+                    <div class="form-row form-group">
+                        <div class="col-lg-6">
+                            <span>Nro. Contrato</span>
+                            <input type="text" name="txtNumContrato" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                        </div>
+                        <div class="col-lg-6">
+                            <span>Número de Versión</span>
+                            <input type="text" name="txtNumVersion" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-row form-group">
+                        <div class="col-lg-4">
+                            <span>Diagnóstico Incluido</span>
+                            <select id="cboDiagIncluido" name="cboDiagIncluido" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col-lg-4">
+                            <span>Proc. Incluidos</span>
+                            <select id="cboProcIncluido" name="cboProcIncluido" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col-lg-4">
+                            <span>Tipo de Contrato</span>
+                            <select class="form-control form-control-sm disabled" name="cboTipContrato" disabled></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6">
+
+                    <div class="form-row form-group">
+                        <div class="col-lg-2">
+                            <span>Código</span>
+                            <input type="text" name="txtDtoIdProveedor" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                        </div>
+                        <div class="col-lg-10">
+                            <span>Proveedor</span>
+                            <input type="text" name="txtDtoProveedor" class="form-control form-control-sm disabled" readonly="readonly">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-row form-group">
+                        <div class="col-lg-2">
+                            <span>Código</span>
+                            <input type="text" name="txtDtoIdSucursal" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                        </div>
+                        <div class="col-lg-10">
+                            <span>Sucursal</span>
+                            @*<div class="input-group input-group-sm">*@
+                            <input type="text" name="txtDtoSucursal" class="form-control form-control-sm disabled" readonly="readonly">
+                            @*<div class="input-group-append">
+                            <button class="btn btn-secondary px-2 form-control-sm" type="button" id="btnMdlCbrtraScrsl" data-toggle="modal" data-target="#mdlBuscarCodProveedor">
+                                <i class="fa fa-search "></i>
+                            </button>
+                        </div>*@
+                            @*</div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6">
+
+                    <div class="form-row form-group">
+                        <div class="col-lg-2">
+                            <span>Codigo</span>
+                            <input type="text" id="txtIdBeneficio" name="txtIdBeneficio" class="form-control form-control-sm text-right disabled" readonly="readonly">
+                        </div>
+                        <div class="col-lg-10">
+                            <span>Beneficio</span>
+                            <div class="input-group input-group-sm">
+                                <input type="text" id="txtBeneficio" name="txtBeneficio" class="form-control form-control-sm disabled" readonly="readonly">
+                                <div class="input-group-append">
+                                    <button class="btn btn-secondary px-2 form-control-sm" type="button" id="btnMdlCbrtraBnfcio" data-toggle="modal" data-target="#mdlBeneficioScrsl">
+                                        <i class="fa fa-search "></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-row form-group d-none">
+                        <div class="col-lg-4">
+                            <span>Diagnóstico Incluido</span>
+                            <select id="cboDiagIncluido" name="cboDiagIncluido" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col-lg-4">
+                            <span>Proc. Incluidos</span>
+                            <select id="cboProcIncluido" name="cboProcIncluido" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col-lg-4">
+                            <span>Tipo de Contrato</span>
+                            <select class="form-control form-control-sm disabled" name="cboTipContrato" disabled></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    @*</div>*@
+                    <div class="col-lg-6 d-none">
+                        <partial name="/Views/Shared/Partials/_AuditoriaPartial3.cshtml" />
+                    </div>
+                    @*</div>*@
+                    <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+                    <hr class="dropdown-divider bg-warning mt-1 mb-3">
+                    <div class="form-row form-group">
+                        <h5>Acuerdos de Coberturas de Beneficio</h5>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-lg-6">
+                            <div class="form-row form-group">
+                                <div class="col-lg-4 d-none">
+                                    <span>Costo Fijo x Paciente</span>
+                                    <input type="number" class="form-control form-control-sm text-right pr-1 numeroDecimal" id="txtCostoFijoPac" name="txtCostoFijoPac" min="-1" max="9999999" step="0.01" maxlength="9" placeholder="0.00">
+                                </div>
+                                <div class="col-lg-4">
+                                    <span>Nro. Días Acumulados</span>
+                                    <input type="number" class="form-control form-control-sm text-right solonumeros pr-1" id="txtNDiasAcumulados" name="txtNDiasAcumulados" min="0" max="30" step="1" maxlength="2" placeholder="0">
+                                </div>
+                                <div class="col-lg-4 d-none">
+                                    <span>Valor Capita</span>
+                                    <input type="number" class="form-control form-control-sm text-right pr-1 numeroDecimal" id="txtValorCapita" name="txtValorCapita" min="-1" max="9999999" step="0.01" maxlength="9" placeholder="0.00">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-right">
+
+                        </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-end">
+                        <div class="col-lg-4">
+                            <div class="input-group is-invalid">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="ArchivoCobertura">
+                                    <label class="custom-file-label" id="lblarchivoCob" for="ArchivoCobertura">Seleccionar Archivo...</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary btn-block font-weight-light" type="button" id="btnCargarTramaCobertura">CARGAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="col-12">
+                            <table id="dtAcuerdoCobertura" class="table table-striped table-bordered"></table>
+                        </div>
+                    </div>
+</form>
+    @*</div>*@
+</div>
+<input type="hidden" id="hfactionCobertura" />
+<input type="hidden" id="hfIdCoberturaDet" />
+<input type="hidden" id="hfIdBeneficio" />

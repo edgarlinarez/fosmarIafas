@@ -1,0 +1,50 @@
+﻿<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-11 px-0">
+            <div class="container">
+                <div class="form-row d-flex mb-1">
+                    <div class="col-lg-3 form-group px-1">
+                        <span class="required-form-label">Código</span>
+                        <input type="text" id="txtCodigo" name="ID-d" class="form-control form-control-sm" required maxlength="15" disabled readonly="readonly" />
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-lg-12 form-group px-1">
+                        <span class="required-form-span">Descripción</span>
+                        <input type="text" id="txtDescripcion" name="txtDescripcion" class="form-control form-control-sm text-uppercase alfanumerico" required maxlength="150" placeholder="Descripción">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-lg-5 form-group px-1">
+                        <span>Cod. SEGUS</span> @*class="required-form-span"*@
+                        <input type="text" id="txtCSegus" class="form-control form-control-sm text-uppercase alfaNumCharEsp" required maxlength="150" placeholder="Cod. Segus">@*solonumeros*@
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-5 form-group px-1">
+                        <span>Unidad SEGUS</span>
+                        <input type="text" id="txtUSegus" name="txtUSegus" class="form-control form-control-sm text-uppercase" step="0.01" required maxlength="150" placeholder="0.00">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-lg-5 form-group px-1">
+                        <span>Cod. Nomenclador</span>
+                        <input type="text" id="txtCNomenclador" name="txtCNomenclador" class="form-control form-control-sm text-uppercase alfaNumCharEsp" required maxlength="150" placeholder="Cod. Nomenclador">
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-5 form-group px-1">
+                        <span>Unidad Nomenclador</span>
+                        <input type="text" id="txtUNomenclador" name="txtUNomenclador" class="form-control form-control-sm text-uppercase" step="0.01" required maxlength="150" placeholder="0.00">
+                    </div>
+                    </div>
+                    @*<div class="col">&nbsp;</div>*@
+                </div>
+                <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+            </div>
+    </div>
+ </div>

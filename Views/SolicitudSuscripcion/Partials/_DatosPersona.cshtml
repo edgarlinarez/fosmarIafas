@@ -1,0 +1,39 @@
+﻿<div class="container">
+    <div class="form-group d-flex mb-1">
+        <div class="col-lg-6">
+            <span class="required-form-span"> C&oacute;digo</span>
+            <input type="text" id="txtCodigo" name="ID-d" class="form-control form-control-sm" required maxlength="15" />
+            <button type="button" class="btn btn-info btn-xs btn-search" data-toggle="modal" data-target="#mdlCajeros"  title="Buscar"><span><i class="la la-search"></i></span></button>
+        </div>
+    </div>
+    <div class="form-group d-flex mb-1">
+        <div class="col-lg-6">
+            <span class="required-form-span"> Apellido Paterno</span>
+            <input type="text" id="aptrno" name="aptrno" class="form-control form-control-sm text-uppercase alfanumerico" readonly>
+        </div>
+        <div class="col-lg-6">
+            <span class="required-form-span"> Apellido Materno</span>
+            <input type="text" id="amtrno" name="amtrno" class="form-control form-control-sm text-uppercase alfanumerico" readonly>
+        </div>
+        <div class="col-lg-6">
+            <span class="required-form-span"> Primer Nombre</span>
+            <input type="text" id="pnmbre" name="pnmbre" class="form-control form-control-sm text-uppercase alfanumerico" readonly>
+        </div>
+        <div class="col-lg-6">
+            <span class="required-form-span"> Segundo Nombre</span>
+            <input type="text" id="snmbre" name="snmbre" class="form-control form-control-sm text-uppercase alfanumerico" readonly>
+        </div>
+        <div class="col-lg-6">
+            <span class="required-form-span"> Clase de Persona</span>
+            <input type="text" id="gdtprsna" name="gdtprsna" class="form-control form-control-sm text-uppercase alfanumerico" readonly>
+        </div>
+    </div>
+    <div class="form-group d-flex mb-1">
+        <div class="col-lg-6">
+            <span class="required-form-span"> Fecha de Ingreso</span>
+            <input type="date" id="fingrso" name="fingrso" class="form-control form-control-sm" required />
+        </div>
+    </div>
+</div>
+ @* AUDITORIA *@
+ <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />

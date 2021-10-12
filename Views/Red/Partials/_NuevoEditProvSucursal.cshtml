@@ -1,0 +1,59 @@
+﻿<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="mdlProvSucursalTitle">Proveedores Sucursales</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form id="frmCfgRed" autocomplete="off">
+                <div class="form-row">
+                    <div class="col-lg-6 form-group">
+                        <span>Código</span>
+                        <input type="hidden" id="hfIdCfgRed"/>
+                        <input type="text" id="txtIdCfgRed" class="form-control form-control-sm" readonly />
+                    </div>
+                    <div class="col-lg-6 form-group"></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-6 form-group">
+                        <span class="required-form-span">Proveedor</span>
+                        <select id="cboCfgRedProveedor" name="cboCfgRedProveedor" class="form-control form-control-sm"></select>
+                        <label for="cboCfgRedProveedor" class="form-label error"></label>
+                    </div>
+                    <div class="col-6 form-group">
+                        <span class="required-form-span">Sucursal</span>
+                        <select id="cboCfgRedSucursal" name="cboCfgRedSucursal" class="form-control form-control-sm"></select>
+                        <label for="cboCfgRedSucursal" class="form-label error"></label>
+                    </div>
+                </div>
+                <div class="form-row form-group -content-end rngFechasVIGENCIA">
+                    <div class="col-6">
+                        <span>Fe. Inicio de Vigencia</span>
+                        <div class="input-group input-group-sm"> 
+                            <input id="txtfinivigencia" name="txtfinivigencia" class="form-control dpRngVig formatoFechas" type="text">
+                            <div class="input-group-append">
+                                <label class="input-group-text px-2" for="txtfinivigencia"><i class="fa fa-calendar"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span>Fe. Fin de Vigencia</span>
+                        <div class="input-group input-group-sm">
+                            <input id="txtffinvigencia" name="txtffinvigencia" class="form-control dpRngVig formatoFechas" type="text">
+                            <div class="input-group-append">
+                                <label class="input-group-text px-2" for="txtffinvigencia"><i class="fa fa-calendar"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal"><i class="fa fa-close mr-2"></i>Cerrar</button>
+            <button type="button" id="btnGuSucursal" class="btn btn-primary btn-xs"><i class="fa fa-save mr-2"></i>Guardar</button>
+        </div>
+    </div>
+</div>

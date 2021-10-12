@@ -1,0 +1,295 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>Agregar Proveedor</h5>
+        </div>
+    </div>
+    <hr class="dropdown-divider bg-warning border-bottom border-warning mt-1">
+    <div class="container">
+        <form id="frmProveedor" autocomplete="off">
+            <div class="form-row form-group">
+                <div class="col-3">
+                    <div class="form-row">
+                        <div class="col-6 pt-1">
+                            <button id="btnMdlBsqPersona" class="btn btn-primary btn-xs mt-3" type="button" data-toggle="modal" data-target="#mdlBuscarPersona" style="">Buscar Persona</button>
+                        </div>
+                        <div class="col-6">
+                            <span>Código</span>
+                            <input type="hidden" id="hfIdPersona">
+                            <input type="text" id="txtID" class="form-control form-control-sm px-1 text-right disabled" readonly="readonly">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-row">
+                        <div class="col-6">
+                            <span>Tipo Documento</span>
+                            <select id="cboTDocumento" name="cboTDocumento" class="form-control form-control-sm disabled" disabled="disabled"></select>
+                        </div>
+                        <div class="col-6">
+                            <span>Nro. Documento</span>
+                            <input type="hidden" id="hfIdDocumento">
+                            <input type="text" id="txtNDocumento" name="txtNDocumento" class="form-control form-control-sm px-1 disabled" readonly="readonly">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-row">
+                        <div class="col-9">
+                            <span>Razón Social</span>
+                            <input type="text" id="txtRazonSocial" name="txtRazonSocial" class="form-control form-control-sm disabled" readonly="readonly">
+                        </div><div class="col-3">
+                            <span>Tipo de Empresa</span>
+                            <select id="cboTEmpresa" name="cboTEmpresa" class="form-control form-control-sm"></select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row form-group" id="cnt-ape-nom">
+                <div class="col-4">
+                    <span>Apellido Paterno</span>
+                    <input type="text" id="txtAPaterno" name="txtAPaterno" class="form-control form-control-sm disabled" readonly="readonly" />
+                </div>
+                <div class="col-4">
+                    <span>Apellido Materno</span>
+                    <input type="text" id="txtAMaterno" name="txtAMaterno" class="form-control form-control-sm disabled" readonly="readonly" />
+                </div>
+                <div class="col-4">
+                    <div class="form-row">
+                        <div class="col-6">
+                            <span>Primer Nombre</span>
+                            <input type="text" id="txtPNombre" name="txtPNombre" class="form-control form-control-sm disabled" readonly="readonly" />
+                        </div>
+                        <div class="col-6">
+                            <span>Segundo Nombre</span>
+                            <input type="text" id="txtSNombre" class="form-control form-control-sm disabled" readonly="readonly" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-4">
+                    <span>Dirección</span>
+                    <select id="cboDireccionPers" name="cboDireccionPers" class="form-control form-control-sm"></select>
+                    <div class="input-group input-group-sm d-none">
+                        <input type="hidden" id="hfIdDireccion" />
+                        <input type="text" id="txtDireccionPers" name="txtDireccionPers" class="form-control form-control-sm disabled" readonly="readonly" />
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary px-2" type="button" id="btnmdlDireccion" data-toggle="modal" data-target="#mdlBuscarDireccion">
+                                <i class="fa fa-search "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <span>Teléfono</span>
+                    <select id="cboTelefonoPers" name="cboTelefonoPers" class="form-control form-control-sm"></select>
+                    <div class="input-group input-group-sm d-none">
+                        <input type="hidden" id="hfIdTelefono" />
+                        <input type="text" id="txtTelefonoPers" name="txtTelefonoPers" class="form-control form-control-sm disabled" readonly="readonly" />
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary px-2" type="button" id="btnmdlTelefono" data-toggle="modal" data-target="#mdlBuscarTelefono">
+                                <i class="fa fa-search "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <span>Correo Electrónico</span>
+                    <select id="cboCorreoPers" name="cboCorreoPers" class="form-control form-control-sm"></select>
+                    <div class="input-group input-group-sm d-none">
+                        <input type="hidden" id="hfIdCorreo" />
+                        <input type="text" id="txtCorreoPers" name="txtCorreoPers" class="form-control form-control-sm disabled" readonly="readonly" />
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary px-2" type="button" id="btnmdlCorreo" data-toggle="modal" data-target="#mdlBuscarCorreo">
+                                <i class="fa fa-search "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-4">
+                    <div class="form-row">
+                        <div class="col-6">
+                            <span>Tipo Proveedor</span>
+                            <select id="cboTiProveedor" name="cboTiProveedor" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col-6">
+                            <span>Tipo relación proveedor</span>
+                            <select id="cboTiRProveedor" name="cboTiRProveedor" class="form-control form-control-sm"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-row">
+                        <div class="col-6">
+                            <span>Zonal Naval</span>
+                            <select id="cboZNaval" name="cboZNaval" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col-6">
+                            <span>Indicador Institucional</span>
+                            <select id="cboIndInstitucional" name="cboIndInstitucional" class="form-control form-control-sm"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <span>Página Web</span>
+                    <input type="text" id="txtPWeb" name="txtPWeb" class="form-control form-control-sm " />@*formatopaginaWeb*@
+                </div>
+            </div>
+            <div class="form-row form-group d-none">
+                <div class="col">
+                    <select>
+                        <option id="cboIndExIGV" class="form-control form-control-sm"></option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select>
+                        <option id="cboGEconomico" class="form-control form-control-sm"></option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select>
+                        <option id="cboIndCertificado" class="form-control form-control-sm"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-lg-12 d-none">
+                    <label>Cuentas Bancarias <button type="button" class="btn btn-secondary btn-xs ml-1"><i class="fa fa-plus"></i> </button></label>
+                    <div class="form-row bg-light" id="cardCtas">
+                        <div class="col-3 item d-none">
+                            <div class="card card-bordered">
+                                <div class="card-body p-2">
+                                    <h6 class="card-title mb-0">Banco</h6>
+                                    <div class="card-text">
+                                        BBVA
+                                    </div><h6 class="card-title mb-0">Tipo Cuenta</h6><div class="card-text">Cta. Ahorros</div>
+                                    <h6 class="card-title mb-0">Nro Cta.</h6>
+                                    <div class="card-text">1234 3216 9871 1234</div>
+                                    <h6 class="card-title mb-0">CCI</h6><div class="card-text">12 1234 3216 9871 1234 23 </div>
+                                </div>
+                                <div class="card-footer bg-white text-right p-1">
+                                    <button type="button" class="btn btn-outline-secondary btn-xs border border-light btn-edit"><i class="fa fa-pencil-square-o fa-2x"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary btn-xs border border-light btn-edit"><i class="fa fa-star-o fa-2x"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary btn-xs border border-light btn-edit"><i class="fa fa-trash fa-2x"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Cuentas Bancarias <button type="button" class="btn btn-secondary btn-xs ml-1 btn-bcb" data-toggle="modal" data-target="#mdlBuscarCuentaBanco"><i class="fa fa-plus"></i> </button></label>
+                    <table id="dtCtaProveedor" class="table table-striped table-bordered"></table>
+                </div>
+            </div>
+            <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+            <hr class="dropdown-divider mb-3">
+            <div class="form-footer text-right">
+                <button type="button" id="btnGProveedor" class="btn btn-primary btn-xs"><i class="fa fa-save mr-1"></i> Guardar</button>
+                <button type="button" id="btnVListado" class="btn btn-secondary btn-xs"><i class="fa fa-arrow-left mr-1"></i>Volver</button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+<div class="modal fade" id="mdlBuscarPersona" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarPersonaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarPersonaLabel">Busqueda Persona</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <partial name="Partials/_ListarPersona" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mdlBuscarDireccion" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarPersonaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarPersonaLabel">Busqueda Persona</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <partial name="../Persona/Partials/_DireccionPersona" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mdlBuscarTelefono" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarTelefonoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarTelefonoLabel">Busqueda Telefono</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <partial name="../Persona/Partials/_TelefonoPersona" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mdlBuscarCorreo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarCorreoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarCorreoLabel">Busqueda Correo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <partial name="../Persona/Partials/_CorreoPersona" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hftPersona" />
+<input type="hidden" id="hfDatosPrv" />
+<input type="hidden" id="hfDatosScr" />
+<div class="modal fade" id="mdlBuscarCuentaBanco" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="mdlBuscarCuentaBancoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mdlBuscarCorreoLabel">Busqueda Cuenta de Banco</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="form-row">
+                        <table id="dtCuentaBancoproveedor" class="table table-striped table-bordered tabla_Busqueda"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hftPersona" />

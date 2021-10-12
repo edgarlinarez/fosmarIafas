@@ -1,0 +1,160 @@
+﻿.form-group .form-control.error {
+    border: 1px solid #d80000;
+}
+
+    .form-group label.error {
+        color: #d80000;
+        margin:0;
+    }
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 26px;
+}
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 13px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+.bd-highlight {
+    /*background-color: rgba(86,61,124,.15);*/
+    border: 1px solid rgba(86,61,124,.15);
+}
+
+
+.loaderbody {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+}
+
+
+.loader-div {
+    width: 100px;
+}
+
+.loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid rgba(30, 30, 30, 0.5);
+    border-radius: 50%;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 50px;
+    margin: auto;
+}
+
+.loader-text {
+    color: rgba(30, 30, 30, 0.5);
+    text-align: center;
+}
+
+    .loader-text:after {
+        content: 'Cargando';
+        animation: load 1s linear infinite;
+    }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        content: 'Cargando';
+    }
+
+    33% {
+        content: 'Cargando.';
+    }
+
+    67% {
+        content: 'Cargando..';
+    }
+
+    100% {
+        content: 'Cargando...';
+    }
+}
+
+
+.select2-selection.select2-selection--single.error {
+    border: 1px solid #d80000 !important;
+}
+
+.moduleA a.collapsed:after {
+    content: '+ Mostrar auditoría';
+}
+
+.moduleA a.mostrarA:after {
+    content: '- Ocultar auditoría';
+}
+
+.dataTables_wrapper {
+    overflow-x:auto !important;
+}
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 0 !important;
+        border: none !important;
+        margin-top: 0px !important;
+    }
+.tabla_Busqueda tr {
+    cursor:pointer;
+}

@@ -1,0 +1,19 @@
+﻿.input-group .input-group-append > .input-group-text, .input-group .input-group-prepend > .input-group-text {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ebedf2;
+    color: #575962;
+}
+
+.input-validation-error {
+    border: solid 1px #ff0000;
+}
+
+.input-error-validate {
+    border-bottom-color: red !important;
+}
+
+.label-error-validate {
+    color: red !important;
+    position: relative !important;
+}

@@ -1,0 +1,144 @@
+﻿<input type="hidden" id="codContratante" value="@ViewBag.id" />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-11 px-0">
+            <form id="FormularioContratante" autocomplete="off">
+                <div class="container">
+                    <div class="row">
+                        <div class="form-group col-lg-2 col-md-2 col-sm-4">
+                            <span class="required-form-span">C&oacute;digo Contratante</span>
+                            <input id="idContratante" class="form-control form-control-sm solonumeros required" type="text">
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-4">
+                            <span class="d-block">&nbsp;</span>
+                            <button type="button" class="btn btn-primary btn-xs btn-BContra" data-toggle="modal" href="modal_buscar_contratista">
+                                <i class="fa fa-search mr-1"></i>Buscar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span>Tipo Documento</span>
+                            <select id="cboTipoDocumento" name="cboTipoDocumento" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span>Nro. Documento</span>
+                            <input id="txtDocumento" class="form-control form-control-sm solonumeros required" type="text">
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span>CIP</span>
+                            <input id="txtCIP" class="form-control form-control-sm solonumeros required" type="text">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span"> Apellido Paterno </span>
+                            <input id="txtAPaterno" name="txtAPaterno" class="form-control form-control-sm text-uppercase sololetrasyespacios homo required" type="text" maxlength="50">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span"> Apellido Materno </span>
+                            <input id="txtAMaterno" name="txtAMaterno" class="form-control form-control-sm text-uppercase sololetrasyespacios homo required" type="text" maxlength="50">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span"> Apellido Casada </span>
+                            <input id="txtACasada" name="txtACasada" class="form-control form-control-sm text-uppercase sololetrasyespacios" type="text" maxlength="50">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span"> Primer Nombre </span>
+                            <input id="txtPNombre" name="txtPNombre" class="form-control form-control-sm text-uppercase sololetrasyespacios homo" type="text" maxlength="30">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span"> Segundo Nombre </span>
+                            <input id="txtSNombre" name="txtSNombre" class="form-control form-control-sm text-uppercase sololetrasyespacios" type="text" maxlength="30">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span">Fecha Nacimiento </span>
+                            <div class="input-group">
+                                <input id="txtFNacimiento" name="txtFNacimiento" class="form-control form-control-sm formatoFechas" type="text">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <span id="msg0" style="color:red;" class="msg0"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span class="required-form-span">Estado Civil</span>
+                            <select id="cboECivil" name="cboECivil" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span class="required-form-span">Sexo</span>
+                            <select id="cboSexo" name="cboSexo" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <span class="required-form-span">Tel&eacute;fono</span>
+                            <input id="txtTelefono" name="txtTelefono" class="form-control form-control-sm solonumeros required" type="text" />
+                        </div>
+                        <div class="form-group col-lg-5 col-md-5 col-sm-5">
+                            <span class="required-form-span">E-mail</span>
+                            <input id="txtEmail" name="txtEmail" class="form-control form-control-sm text-uppercase validoEmail" type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                            <span class="required-form-span">Direcci&oacute;n</span>
+                            <input id="txtAddress" name="txtAddress" class="form-control form-control-sm text-uppercase" type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                            <span class="required-form-span">Departamento</span>
+                            <select id="cboPDepartamento" name="cboPDepartamento" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                            <span class="required-form-span">Provincia</span>
+                            <select id="cboPProvincia" name="cboPProvincia" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-4">
+                            <span class="required-form-span">Distrito</span>
+                            <select id="cboPDistrito" name="cboDistrito" class="form-control form-control-sm required"></select>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                            <h6>Informaci&oacute;n Adicional</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span class="required-form-span">Encabezado Corto</span>
+                            <select id="cboEncabezado" name="cboEncabezado" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span class="required-form-span">Procedencia</span>
+                            <select id="cboProcedencia" name="cboProcedencia" class="form-control form-control-sm required"></select>
+                        </div>
+                        <div class="form-group col-lg-3 col-md-2 col-sm-2">
+                            <span class="required-form-span">Alias 1</span>
+                            <input id="txtAlias1" name="txtAlias1" class="form-control form-control-sm text-uppercase" type="text" />
+                        </div>
+                        <div class="form-group col-lg-3 col-md-2 col-sm-2">
+                            <span class="required-form-span">Alias 2</span>
+                            <input id="txtAlias2" name="txtAlias2" class="form-control form-control-sm text-uppercase" type="text" />
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <span class="required-form-span">Tipo Alerta</span>
+                            <select id="CboAlert" name="CboAlert" class="form-control form-control-sm required"></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                            <button id="btnGrabarContratante" type="button" class="btn btn-primary btn-xs pull-right">Grabar</button>
+                        </div>
+                    </div>
+                </div>
+                <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="form-group col-lg-4 col-md-4 col-sm-4">
+</div>

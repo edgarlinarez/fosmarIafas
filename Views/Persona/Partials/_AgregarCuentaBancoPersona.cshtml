@@ -1,0 +1,42 @@
+﻿<input type="hidden" id="hfCodCuentaBanco" />
+<form id="FormularioCuentaBanco" autocomplete="off">
+    <div class="form-row">
+        <div class="col form-group">
+            <span class="required-form-span"> Banco </span>
+            <select id="cboBanco" name="cboBanco" class="form-control form-control-sm">
+            </select>
+        </div>
+        <div class="col form-group">
+            <span class="required-form-span"> Tipo Cuenta </span>
+            <select id="cboTipoCuenta" name="cboTipoCuenta" class="form-control form-control-sm">
+            </select>
+        </div>
+        <div class="col form-group">
+            <span class="required-form-span"> Nro de Cuenta </span>
+            <input id="txtNroCuenta" name="txtNroCuenta" class="form-control form-control-sm text-uppercase solonumeros" type="text" maxlength="20">
+        </div>
+        <div class="col form-group">
+            <span class="required-form-span"> Nro de CCI </span>
+            <input id="txtNroCci" name="txtNroCci" class="form-control form-control-sm text-uppercase solonumeros" type="text" maxlength="20">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-6 form-group">
+            <span class="required-form-span"> Titular de la cuenta </span>
+            <input id="txtTitularCuenta" name="txtTitularCuenta" class="form-control form-control-sm text-uppercase alfanumerico" type="text" maxlength="100">
+        </div>
+        <div class="col-3 form-group">
+            <span class="required-form-span"> Tipo Documento </span>
+            <select id="cboTipoDocumentocb" name="cboTipoDocumentocb" class="form-control form-control-sm">
+            </select>
+        </div>
+        <div class="col-3 form-group">
+            <span class="required-form-span"> Nro Documento </span>
+            <input id="txtNroDocumento" name="txtNroDocumento" class="form-control form-control-sm text-uppercase sololetrasyespacios" type="text">
+        </div>
+    </div>
+    <div class="col text-right px-1">
+        <button id="btnGrabarCuentaBanco" type="button" class="btn btn-primary btn-xs">Guardar</button>
+    </div>
+    <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+</form>

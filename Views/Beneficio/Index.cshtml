@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Beneficio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<partial name="Partials/_ControlesPartial" model="@(ControlesVistas.VistaBeneficio)" />
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="Lista-tab" data-toggle="tab" href="#listar" role="tab" aria-controls="home" aria-selected="true">Listado</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" id="DatosGenerales-tab" data-toggle="tab" href="#datosgenerales" role="tab" aria-controls="home" aria-selected="true">Beneficio</a>
+    </li>
+</ul>
+
+<div class="tab-content mt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="listar" role="tabpanel" aria-labelledby="Lista-tab">
+        <div class="row">
+            <partial name="Partials/_ListarBeneficio"/>
+            @*<partial name="Partials/_AgregarBeneficio" />*@
+        </div>
+    </div>
+    <div class="tab-pane fade" id="datosgenerales" role="tabpanel" aria-labelledby="DatosGenerales-tab">
+        <div class="row">
+            <partial name="Partials/_AgregarBeneficio" />
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="hfaction" />
+@section Scripts{
+    <script asp-append-version="true" src="~/js/views/Beneficio/index.js"></script>
+}

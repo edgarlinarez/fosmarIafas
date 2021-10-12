@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Grupo Procedimiento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <button type="button" class="btn btn-primary btn-xs btn-nuevo" data-toggle="modal" data-target="#mdlGrupoProcedimiento"><i class="la la-plus mr-1"></i>Nuevo</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="tabla_GrupoProcedimiento" class="table table-striped table-bordered"></table>
+        </div>
+    </div>
+</div>
+<partial name="Partials/_ModalGrupoProcedimiento" />
+<input type="hidden" id="hfGrupoProcedimiento" />
+
+@section Scripts{
+    <script asp-append-version="true" src="~/js/views/GrupoProcedimiento/index.js"></script>
+}

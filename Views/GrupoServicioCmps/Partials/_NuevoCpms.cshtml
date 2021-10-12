@@ -1,0 +1,85 @@
+﻿<form id="frmCpms" autocomplete="off">
+    <div class="">
+        <div class="form-row form-group">
+            <div class="col-lg-3">
+                <span>Código</span>
+                <input type="hidden" id="hfCodCpms" />
+                <input type="text" id="txtCodigoCpms" name="txtCodigoCpms" class="form-control form-control-sm text-uppercase" required maxlength="10" placeholder="CODIGO" />
+            </div>
+            <div class="col-lg-9">
+                <span>Descripción</span>
+                <input type="text" id="txtDscrpcnCpms" name="txtDscrpcnCpms" class="form-control form-control-sm text-uppercase alfaNumCharEsp" placeholder="DESCRIPCIÓN" />
+            </div>
+            <div class="col-lg-3 d-none">
+                <span>IDCPMS</span>
+                <input type="hidden" id="hfIdCpms" />
+                <input type="text" id="txtIDcpms" name="txtIDcpms" class="form-control form-control-sm" readonly />
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <div class="col-lg-6 d-none">
+                <span>Descripción</span>
+                <input type="text" id="txtDscrpcnCpms" name="txtDscrpcnCpms" class="form-control form-control-sm alfanumerico text-uppercase" placeholder="DESCRIPCIÓN" />
+            </div>
+            <div class="col-6">
+                <span>Abreviatura</span>
+                <input type="text" id="txtAbrvtraCpms" name="txtAbrvtraCpms" class="form-control form-control-sm text-uppercase alfaNumCharEsp" placeholder="ABREVIATURA" />
+            </div>
+            <div class="col-6">
+                <span>TEDEF</span>
+                <select id="cboTedef" name="cboTedef" class="form-control form-control-sm"></select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-4 form-group">
+                <span>Grupo Servicio</span>
+                <select id="cboGSrvcoBusq" name="cboGSrvcoBusqueda" class="form-control form-control-sm"></select>
+                <label for="cboGSrvcoBusq" class="form-label error"></label>
+                <div class="input-group input-group-sm d-none">
+                    <input type="hidden" id="hfIdSeccionBusq" />
+                    <input type="text" id="txtGSrvcoBusq" name="txtGSrvcoBusq" class="form-control form-control-sm disabled" readonly="readonly" />
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary px-2" type="button" id="btnmdlSeccionBusq" data-toggle="modal" data-target="#mdlBuscarSeccion">
+                            <i class="fa fa-search "></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 form-group">
+                <span>Sección</span>
+                <select id="cboSeccionBusq" name="cboSeccionBusq" class="form-control form-control-sm"></select>
+                <label for="cboSeccionBusq" class="form-label error"></label>
+                <div class="input-group input-group-sm d-none">
+                    <input type="hidden" id="hfIdSeccionBusq" />
+                    <input type="text" id="txtSeccionBusq" name="txtSeccionBusq" class="form-control form-control-sm disabled" readonly="readonly" />
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary px-2" type="button" id="btnmdlSeccionBusq" data-toggle="modal" data-target="#mdlBuscarSeccion">
+                            <i class="fa fa-search "></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 form-group">
+                <span>SubSección</span>
+                <select id="cboSubseccionBusq" name="cboSubseccionBusq" class="form-control form-control-sm"></select>
+                <label for="cboSubseccionBusq" class="form-label error"></label>
+                <div class="input-group input-group-sm d-none">
+                    <input type="hidden" id="hfNombreProveedor" />
+                    <input type="text" id="txtProveedor" name="txtProveedor" class="form-control form-control-sm disabled" readonly="readonly" />
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary px-2 form-control-sm" type="button" id="btnmdlCodProveedor" data-toggle="modal" data-target="#mdlBuscarCodProveedor">
+                            <i class="fa fa-search "></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <partial name="/Views/Shared/Partials/_AuditoriaPartial.cshtml" />
+
+    </div>
+</form>
+<div class="modal-footer">
+        @*<button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Cerrar</button>*@
+        <button id="btnGrCpms" type="button" class="btn btn-primary btn-xs">Guardar</button>
+    </div>
+

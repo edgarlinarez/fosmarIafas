@@ -1,0 +1,544 @@
+@inject FOSMAR.Negocios.General.Seguridad.IPerfilObjetoProxy _perfilObjetoProxy
+@model string
+@{
+    var controlesArray = new List<string>();
+    if (Model == ControlesVistas.VistaPersona)
+    {
+        controlesArray.AddRange(new List<string>(){
+            ControlesVistas.Persona.AgregarPersona,
+            ControlesVistas.Persona.EditarPersona,
+            ControlesVistas.Persona.EliminarPersona,
+
+            ControlesVistas.Persona.AgregarDocumento,
+            ControlesVistas.Persona.EditarDocumento,
+            ControlesVistas.Persona.EliminarDocumento,
+
+            ControlesVistas.Persona.AgregarDireccion,
+            ControlesVistas.Persona.EditarDireccion,
+            ControlesVistas.Persona.EliminarDireccion,
+
+            ControlesVistas.Persona.AgregarTelefono,
+            ControlesVistas.Persona.EditarTelefono,
+            ControlesVistas.Persona.EliminarTelefono,
+
+            ControlesVistas.Persona.AgregarCorreo,
+            ControlesVistas.Persona.EditarCorreo,
+            ControlesVistas.Persona.EliminarCorreo,
+
+            ControlesVistas.Persona.AgregarGrado,
+            ControlesVistas.Persona.EditarGrado,
+            ControlesVistas.Persona.EliminarGrado,
+
+            ControlesVistas.Persona.AgregarDependientes,
+            ControlesVistas.Persona.EditarDependientes,
+            ControlesVistas.Persona.EliminarDependientes,
+        });
+    }
+
+    if (Model == ControlesVistas.VistaPlanBeneficio)
+    {
+        controlesArray.AddRange(new List<string>(){
+            ControlesVistas.PlanBeneficio.NuPBeneficio,
+            ControlesVistas.PlanBeneficio.EdPBeneficio,
+            ControlesVistas.PlanBeneficio.ElPBeneficio,
+            ControlesVistas.PlanBeneficio.GuPBeneficio,
+            ControlesVistas.PlanBeneficio.NuVersion,
+            ControlesVistas.PlanBeneficio.EdVersion,
+            ControlesVistas.PlanBeneficio.ElVersion,
+            ControlesVistas.PlanBeneficio.GuVersion,
+            ControlesVistas.PlanBeneficio.NuDExcluido,
+            ControlesVistas.PlanBeneficio.EdDExcluido,
+            ControlesVistas.PlanBeneficio.ElDExcluido,
+            ControlesVistas.PlanBeneficio.GuDExcluido,
+            ControlesVistas.PlanBeneficio.NuBeneficio,
+            ControlesVistas.PlanBeneficio.EdBeneficio,
+            ControlesVistas.PlanBeneficio.ElBeneficio,
+            ControlesVistas.PlanBeneficio.GuBeneficio,
+            ControlesVistas.PlanBeneficio.NuCopago,
+            ControlesVistas.PlanBeneficio.EdCopago,
+            ControlesVistas.PlanBeneficio.ElCopago,
+            ControlesVistas.PlanBeneficio.GuCopago,
+            ControlesVistas.PlanBeneficio.NuRCopago,
+            ControlesVistas.PlanBeneficio.EdRCopago,
+            ControlesVistas.PlanBeneficio.ElRCopago,
+            ControlesVistas.PlanBeneficio.GuRCopago,
+            ControlesVistas.PlanBeneficio.NuCEtario,
+            ControlesVistas.PlanBeneficio.EdCEtario,
+            ControlesVistas.PlanBeneficio.ElCEtario,
+            ControlesVistas.PlanBeneficio.GuCEtario
+        });
+    }
+
+    if (Model == ControlesVistas.VistaRed)
+    {
+        controlesArray.AddRange(new List<string>(){
+                ControlesVistas.Red.NuRed,
+                ControlesVistas.Red.EdRed,
+                ControlesVistas.Red.ElRed,
+                ControlesVistas.Red.GuRed,
+                ControlesVistas.Red.NuRedSucursal,
+                ControlesVistas.Red.EdRedSucursal,
+                ControlesVistas.Red.ElRedSucursal,
+                ControlesVistas.Red.GuRedSucursal
+        });
+    }
+
+    if (Model == ControlesVistas.VistaBeneficio)
+    {
+        controlesArray.AddRange(new List<string>(){
+                ControlesVistas.Beneficio.NuBeneficio,
+                ControlesVistas.Beneficio.GuBeneficio,
+                ControlesVistas.Beneficio.EdBeneficio,
+                ControlesVistas.Beneficio.ElBeneficio
+        });
+    }
+
+    if (Model == ControlesVistas.VistaTarifario)
+    {
+        controlesArray.AddRange(new List<string>(){
+                ControlesVistas.Tarifario.NuTarifario,
+                ControlesVistas.Tarifario.GuTarifario,
+                ControlesVistas.Tarifario.EdTarifario,
+                ControlesVistas.Tarifario.ElTarifario
+        });
+    }
+    if (Model == ControlesVistas.VistaContratoProveedor)
+    {
+        controlesArray.AddRange(new List<string>()
+{
+
+        ControlesVistas.ContratoProveedor.NuevoContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoVersionContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarVersionContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarVersionContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarVersionContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoDocumentoContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarDocumentoContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarDocumentoContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarDocumentoContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoAcuerdoContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarAcuerdoContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarAcuerdoContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarAcuerdoContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoTarifaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarTarifaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarTarifaContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarTarifaContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoFileTarifaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarFileCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarFileTarifaContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarFileTarifaContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarCoberturaContratoProveedor,
+
+        ControlesVistas.ContratoProveedor.NuevoFileCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EditarFileCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.EliminarFileCoberturaContratoProveedor,
+        ControlesVistas.ContratoProveedor.GrabarFileCoberturaContratoProveedor,
+
+
+    });
+    }
+
+    if (Model == ControlesVistas.VistaProveedor)
+    {
+        controlesArray.AddRange(new List<string>()
+{
+        ControlesVistas.Proveedor.NuevoProveedor,
+        ControlesVistas.Proveedor.EditarProveedor,
+        ControlesVistas.Proveedor.EliminarProveedor,
+        ControlesVistas.Proveedor.GrabarProveedor,
+
+        ControlesVistas.Proveedor.NuevoCuentaBancoProveedor,
+        ControlesVistas.Proveedor.EditarCuentaBancoProveedor,
+        ControlesVistas.Proveedor.EliminarCuentaBancoProveedor,
+        ControlesVistas.Proveedor.GrabarCuentaBancoProveedor,
+
+        ControlesVistas.Proveedor.NuevoEquivalenciasProveedor,
+        ControlesVistas.Proveedor.EditarEquivalenciasProveedor,
+        ControlesVistas.Proveedor.EliminarEquivalenciasProveedor,
+        ControlesVistas.Proveedor.GrabarEquivalenciasProveedor,
+
+        ControlesVistas.Proveedor.NuevoSucursalProveedor,
+        ControlesVistas.Proveedor.EditarSucursalProveedor,
+        ControlesVistas.Proveedor.EliminarSucursalProveedor,
+        ControlesVistas.Proveedor.GrabarSucursalProveedor,
+
+        ControlesVistas.Proveedor.NuevoBeneficioProveedor,
+        ControlesVistas.Proveedor.EditarBeneficioProveedor,
+        ControlesVistas.Proveedor.EliminarBeneficioProveedor,
+        ControlesVistas.Proveedor.GrabarBeneficioProveedor,
+
+
+});
+    }
+    if (Model == ControlesVistas.VistaGrupoProcedimiento)
+    {
+        controlesArray.AddRange(new List<string>()
+{
+        ControlesVistas.GrupoProcedimiento.NuevoGrupoProcedimiento,
+        ControlesVistas.GrupoProcedimiento.EditarGrupoProcedimiento,
+        ControlesVistas.GrupoProcedimiento.EliminarGrupoProcedimiento,
+        ControlesVistas.GrupoProcedimiento.GrabarGrupoProcedimiento,
+
+});
+    }
+    if (Model == ControlesVistas.VistaGrupoBeneficio)
+    {
+        controlesArray.AddRange(new List<string>()
+{
+        ControlesVistas.GrupoBeneficio.NuevoGrupoBeneficio,
+        ControlesVistas.GrupoBeneficio.EditarGrupoBeneficio,
+        ControlesVistas.GrupoBeneficio.EliminarGrupoBeneficio,
+        ControlesVistas.GrupoBeneficio.GrabarGrupoBeneficio,
+
+});
+    }
+
+    if (Model == ControlesVistas.VistaProcedimiento)
+    {
+        controlesArray.AddRange(new List<string>()
+{
+        ControlesVistas.Procedimiento.NuevoProcedimiento,
+        ControlesVistas.Procedimiento.EditarProcedimiento,
+        ControlesVistas.Procedimiento.EliminarProcedimiento,
+        ControlesVistas.Procedimiento.GrabarProcedimiento,
+});
+    }
+
+    var controles = string.Join(",", controlesArray);
+    var perfiles = User.ObtenerPerfiles();
+    var listaControles = await _perfilObjetoProxy.ListarControles(controles, perfiles);
+}
+
+@if (Model == ControlesVistas.VistaProcedimiento)
+{
+    var nPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Procedimiento.NuevoProcedimiento)?.ACCESO ?? false;
+    var ePrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Procedimiento.EditarProcedimiento)?.ACCESO ?? false;
+    var dPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Procedimiento.EliminarProcedimiento)?.ACCESO ?? false;
+    var gPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Procedimiento.GrabarProcedimiento)?.ACCESO ?? false;
+    <input type="hidden" id="nPrcdmnto" value="@nPrcdmnto.ToString()" />
+    <input type="hidden" id="ePrcdmnto" value="@ePrcdmnto.ToString()" />
+    <input type="hidden" id="dPrcdmnto" value="@dPrcdmnto.ToString()" />
+    <input type="hidden" id="gPrcdmnto" value="@gPrcdmnto.ToString()" />
+}
+
+@if (Model == ControlesVistas.VistaGrupoBeneficio)
+{
+    var nGBNFCO = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoBeneficio.NuevoGrupoBeneficio)?.ACCESO ?? false;
+    var eGBNFCO = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoBeneficio.EditarGrupoBeneficio)?.ACCESO ?? false;
+    var dGBNFCO = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoBeneficio.EliminarGrupoBeneficio)?.ACCESO ?? false;
+    var gGBNFCO = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoBeneficio.GrabarGrupoBeneficio)?.ACCESO ?? false;
+    <input type="hidden" id="nGBNFCO" value="@nGBNFCO.ToString()" />
+    <input type="hidden" id="eGBNFCO" value="@eGBNFCO.ToString()" />
+    <input type="hidden" id="dGBNFCO" value="@dGBNFCO.ToString()" />
+    <input type="hidden" id="gGBNFCO" value="@gGBNFCO.ToString()" />
+}
+
+@if (Model == ControlesVistas.VistaGrupoProcedimiento)
+{
+    var nGPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoProcedimiento.NuevoGrupoProcedimiento)?.ACCESO ?? false;
+    var eGPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoProcedimiento.EditarGrupoProcedimiento)?.ACCESO ?? false;
+    var dGPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoProcedimiento.EliminarGrupoProcedimiento)?.ACCESO ?? false;
+    var gGPrcdmnto = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.GrupoProcedimiento.GrabarGrupoProcedimiento)?.ACCESO ?? false;
+    <input type="hidden" id="nGPrcdmnto" value="@nGPrcdmnto.ToString()" />
+    <input type="hidden" id="eGPrcdmnto" value="@eGPrcdmnto.ToString()" />
+    <input type="hidden" id="dGPrcdmnto" value="@dGPrcdmnto.ToString()" />
+    <input type="hidden" id="gGPrcdmnto" value="@gGPrcdmnto.ToString()" />
+}
+
+@if (Model == ControlesVistas.VistaProveedor)
+{
+    var nPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.NuevoProveedor)?.ACCESO ?? false;
+    var ePrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EditarProveedor)?.ACCESO ?? false;
+    var dPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EliminarProveedor)?.ACCESO ?? false;
+    var gPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.GrabarProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nPrvdr" value="@nPrvdr.ToString()" />
+    <input type="hidden" id="ePrvdr" value="@ePrvdr.ToString()" />
+    <input type="hidden" id="dPrvdr" value="@dPrvdr.ToString()" />
+    <input type="hidden" id="gPrvdr" value="@gPrvdr.ToString()" />
+
+    var nCBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.NuevoCuentaBancoProveedor)?.ACCESO ?? false;
+    var eCBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EditarCuentaBancoProveedor)?.ACCESO ?? false;
+    var dCBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EliminarCuentaBancoProveedor)?.ACCESO ?? false;
+    var gCBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.GrabarCuentaBancoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nCBPrvdr" value="@nCBPrvdr.ToString()" />
+    <input type="hidden" id="eCBPrvdr" value="@eCBPrvdr.ToString()" />
+    <input type="hidden" id="dCBPrvdr" value="@dCBPrvdr.ToString()" />
+    <input type="hidden" id="gCBPrvdr" value="@gCBPrvdr.ToString()" />
+
+    var nEPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.NuevoEquivalenciasProveedor)?.ACCESO ?? false;
+    var eEPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EditarEquivalenciasProveedor)?.ACCESO ?? false;
+    var dEPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EliminarEquivalenciasProveedor)?.ACCESO ?? false;
+    var gEPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.GrabarEquivalenciasProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nEPrvdr" value="@nEPrvdr.ToString()" />
+    <input type="hidden" id="eEPrvdr" value="@eEPrvdr.ToString()" />
+    <input type="hidden" id="dEPrvdr" value="@dEPrvdr.ToString()" />
+    <input type="hidden" id="gEPrvdr" value="@gEPrvdr.ToString()" />
+
+    var nSPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.NuevoSucursalProveedor)?.ACCESO ?? false;
+    var eSPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EditarSucursalProveedor)?.ACCESO ?? false;
+    var dSPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EliminarSucursalProveedor)?.ACCESO ?? false;
+    var gSPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.GrabarSucursalProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nSPrvdr" value="@nSPrvdr.ToString()" />
+    <input type="hidden" id="eSPrvdr" value="@eSPrvdr.ToString()" />
+    <input type="hidden" id="dSPrvdr" value="@dSPrvdr.ToString()" />
+    <input type="hidden" id="gSPrvdr" value="@gSPrvdr.ToString()" />
+
+    var nBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.NuevoBeneficioProveedor)?.ACCESO ?? false;
+    var eBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EditarBeneficioProveedor)?.ACCESO ?? false;
+    var dBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.EliminarBeneficioProveedor)?.ACCESO ?? false;
+    var gBPrvdr = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Proveedor.GrabarBeneficioProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nBPrvdr" value="@nBPrvdr.ToString()" />
+    <input type="hidden" id="eBPrvdr" value="@eBPrvdr.ToString()" />
+    <input type="hidden" id="dBPrvdr" value="@dBPrvdr.ToString()" />
+    <input type="hidden" id="gBPrvdr" value="@gBPrvdr.ToString()" />
+
+
+
+
+}
+
+@if (Model == ControlesVistas.VistaContratoProveedor)
+{
+    var nContratoPoveedor = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoContratoProveedor)?.ACCESO ?? false;
+    var eContratoPoveedor = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarContratoProveedor)?.ACCESO ?? false;
+    var dContratoPoveedor = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarContratoProveedor)?.ACCESO ?? false;
+    var gContratoPoveedor = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nContratoPoveedor" value="@nContratoPoveedor.ToString()" />
+    <input type="hidden" id="eContratoPoveedor" value="@eContratoPoveedor.ToString()" />
+    <input type="hidden" id="dContratoPoveedor" value="@dContratoPoveedor.ToString()" />
+    <input type="hidden" id="gContratoPoveedor" value="@gContratoPoveedor.ToString()" />
+
+    var nVrsnCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoVersionContratoProveedor)?.ACCESO ?? false;
+    var eVrsnCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarVersionContratoProveedor)?.ACCESO ?? false;
+    var dVrsnCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarVersionContratoProveedor)?.ACCESO ?? false;
+    var gVrsnCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarVersionContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nVrsnCP" value="@nVrsnCP.ToString()" />
+    <input type="hidden" id="eVrsnCP" value="@eVrsnCP.ToString()" />
+    <input type="hidden" id="dVrsnCP" value="@dVrsnCP.ToString()" />
+    <input type="hidden" id="gVrsnCP" value="@gVrsnCP.ToString()" />
+
+    var nDcmntoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoDocumentoContratoProveedor)?.ACCESO ?? false;
+    var eDcmntoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarDocumentoContratoProveedor)?.ACCESO ?? false;
+    var dDcmntoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarDocumentoContratoProveedor)?.ACCESO ?? false;
+    var gDcmntoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarDocumentoContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nDcmntoCP" value="@nDcmntoCP.ToString()" />
+    <input type="hidden" id="eDcmntoCP" value="@eDcmntoCP.ToString()" />
+    <input type="hidden" id="dDcmntoCP" value="@dDcmntoCP.ToString()" />
+    <input type="hidden" id="gDcmntoCP" value="@gDcmntoCP.ToString()" />
+
+    var nAcuerdoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoAcuerdoContratoProveedor)?.ACCESO ?? false;
+    var eAcuerdoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarAcuerdoContratoProveedor)?.ACCESO ?? false;
+    var dAcuerdoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarAcuerdoContratoProveedor)?.ACCESO ?? false;
+    var gAcuerdoCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarAcuerdoContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nAcuerdoCP" value="@nAcuerdoCP.ToString()" />
+    <input type="hidden" id="eAcuerdoCP" value="@eAcuerdoCP.ToString()" />
+    <input type="hidden" id="dAcuerdoCP" value="@dAcuerdoCP.ToString()" />
+    <input type="hidden" id="gAcuerdoCP" value="@gAcuerdoCP.ToString()" />
+
+    var nTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoTarifaContratoProveedor)?.ACCESO ?? false;
+    var eTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarTarifaContratoProveedor)?.ACCESO ?? false;
+    var dTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarTarifaContratoProveedor)?.ACCESO ?? false;
+    var gTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarTarifaContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nTarifaCP" value="@nTarifaCP.ToString()" />
+    <input type="hidden" id="eTarifaCP" value="@eTarifaCP.ToString()" />
+    <input type="hidden" id="dTarifaCP" value="@dTarifaCP.ToString()" />
+    <input type="hidden" id="gTarifaCP" value="@gTarifaCP.ToString()" />
+
+    var nFTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoFileTarifaContratoProveedor)?.ACCESO ?? false;
+    var eFTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarFileTarifaContratoProveedor)?.ACCESO ?? false;
+    var dFTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarFileTarifaContratoProveedor)?.ACCESO ?? false;
+    var gFTarifaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarFileTarifaContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nFTarifaCP" value="@nFTarifaCP.ToString()" />
+    <input type="hidden" id="eFTarifaCP" value="@eFTarifaCP.ToString()" />
+    <input type="hidden" id="dFTarifaCP" value="@dFTarifaCP.ToString()" />
+    <input type="hidden" id="gFTarifaCP" value="@gFTarifaCP.ToString()" />
+
+    var nCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoCoberturaContratoProveedor)?.ACCESO ?? false;
+    var eCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarCoberturaContratoProveedor)?.ACCESO ?? false;
+    var dCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarCoberturaContratoProveedor)?.ACCESO ?? false;
+    var gCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarCoberturaContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nCoberturaCP" value="@nCoberturaCP.ToString()" />
+    <input type="hidden" id="eCoberturaCP" value="@eCoberturaCP.ToString()" />
+    <input type="hidden" id="dCoberturaCP" value="@dCoberturaCP.ToString()" />
+    <input type="hidden" id="gCoberturaCP" value="@gCoberturaCP.ToString()" />
+
+    var nFCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.NuevoFileCoberturaContratoProveedor)?.ACCESO ?? false;
+    var eFCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EditarFileCoberturaContratoProveedor)?.ACCESO ?? false;
+    var dFCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.EliminarFileCoberturaContratoProveedor)?.ACCESO ?? false;
+    var gFCoberturaCP = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.ContratoProveedor.GrabarFileCoberturaContratoProveedor)?.ACCESO ?? false;
+    <input type="hidden" id="nFCoberturaCP" value="@nFCoberturaCP.ToString()" />
+    <input type="hidden" id="eFCoberturaCP" value="@eFCoberturaCP.ToString()" />
+    <input type="hidden" id="dFCoberturaCP" value="@dFCoberturaCP.ToString()" />
+    <input type="hidden" id="gFCoberturaCP" value="@gFCoberturaCP.ToString()" />
+}
+
+@if (Model == ControlesVistas.VistaPersona)
+{
+    var accesoAgregarPersona = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarPersona)?.ACCESO ?? false;
+    var accesoEditarPersona = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarPersona)?.ACCESO ?? false;
+    var accesoEliminarPersona = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarPersona)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarPersona" value="@accesoAgregarPersona.ToString()" />
+    <input type="hidden" id="accesoEditarPersona" value="@accesoEditarPersona.ToString()" />
+    <input type="hidden" id="accesoEliminarPersona" value="@accesoEliminarPersona.ToString()" />
+
+    var accesoAgregarDocumento = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarDocumento)?.ACCESO ?? false;
+    var accesoEditarDocumento = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarDocumento)?.ACCESO ?? false;
+    var accesoEliminarDocumento = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarDocumento)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarDocumento" value="@accesoAgregarDocumento.ToString()" />
+    <input type="hidden" id="accesoEditarDocumento" value="@accesoEditarDocumento.ToString()" />
+    <input type="hidden" id="accesoEliminarDocumento" value="@accesoEliminarDocumento.ToString()" />
+
+    var accesoAgregarDireccion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarDireccion)?.ACCESO ?? false;
+    var accesoEditarDireccion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarDireccion)?.ACCESO ?? false;
+    var accesoEliminarDireccion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarDireccion)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarDireccion" value="@accesoAgregarDireccion.ToString()" />
+    <input type="hidden" id="accesoEditarDireccion" value="@accesoEditarDireccion.ToString()" />
+    <input type="hidden" id="accesoEliminarDireccion" value="@accesoEliminarDireccion.ToString()" />
+
+    var accesoAgregarTelefono = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarTelefono)?.ACCESO ?? false;
+    var accesoEditarTelefono = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarTelefono)?.ACCESO ?? false;
+    var accesoEliminarTelefono = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarTelefono)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarTelefono" value="@accesoAgregarTelefono.ToString()" />
+    <input type="hidden" id="accesoEditarTelefono" value="@accesoEditarTelefono.ToString()" />
+    <input type="hidden" id="accesoEliminarTelefono" value="@accesoEliminarTelefono.ToString()" />
+
+    var accesoAgregarCorreo = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarCorreo)?.ACCESO ?? false;
+    var accesoEditarCorreo = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarCorreo)?.ACCESO ?? false;
+    var accesoEliminarCorreo = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarCorreo)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarCorreo" value="@accesoAgregarCorreo.ToString()" />
+    <input type="hidden" id="accesoEditarCorreo" value="@accesoEditarCorreo.ToString()" />
+    <input type="hidden" id="accesoEliminarCorreo" value="@accesoEliminarCorreo.ToString()" />
+
+    var accesoAgregarGrado = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarGrado)?.ACCESO ?? false;
+    var accesoEditarGrado = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarGrado)?.ACCESO ?? false;
+    var accesoEliminarGrado = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarGrado)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarGrado" value="@accesoAgregarGrado.ToString()" />
+    <input type="hidden" id="accesoEditarGrado" value="@accesoEditarGrado.ToString()" />
+    <input type="hidden" id="accesoEliminarGrado" value="@accesoEliminarGrado.ToString()" />
+
+    var accesoAgregarDependientes = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.AgregarDependientes)?.ACCESO ?? false;
+    var accesoEditarDependientes = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EditarDependientes)?.ACCESO ?? false;
+    var accesoEliminarDependientes = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Persona.EliminarDependientes)?.ACCESO ?? false;
+    <input type="hidden" id="accesoAgregarDependientes" value="@accesoAgregarDependientes.ToString()" />
+    <input type="hidden" id="accesoEditarDependientes" value="@accesoEditarDependientes.ToString()" />
+    <input type="hidden" id="accesoEliminarDependientes" value="@accesoEliminarDependientes.ToString()" />
+}
+@if (Model == ControlesVistas.VistaPlanBeneficio)
+{
+    var aNuPBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuPBeneficio)?.ACCESO ?? false;
+    var aEdPBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdPBeneficio)?.ACCESO ?? false;
+    var aElPBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElPBeneficio)?.ACCESO ?? false;
+    var aGuPBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuPBeneficio)?.ACCESO ?? false;
+    <input type="hidden" id="aNuPBeneficio" value="@aNuPBeneficio.ToString()" />
+    <input type="hidden" id="aEdPBeneficio" value="@aEdPBeneficio.ToString()" />
+    <input type="hidden" id="aElPBeneficio" value="@aElPBeneficio.ToString()" />
+    <input type="hidden" id="aGuPBeneficio" value="@aGuPBeneficio.ToString()" />
+    var aNuVersion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuVersion)?.ACCESO ?? false;
+    var aEdVersion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdVersion)?.ACCESO ?? false;
+    var aElVersion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElVersion)?.ACCESO ?? false;
+    var aGuVersion = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuVersion)?.ACCESO ?? false;
+    <input type="hidden" id="aNuVersion" value="@aNuVersion.ToString()" />
+    <input type="hidden" id="aEdVersion" value="@aEdVersion.ToString()" />
+    <input type="hidden" id="aElVersion" value="@aElVersion.ToString()" />
+    <input type="hidden" id="aGuVersion" value="@aGuVersion.ToString()" />
+    var aNuDExcluido = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuDExcluido)?.ACCESO ?? false;
+    var aEdDExcluido = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdDExcluido)?.ACCESO ?? false;
+    var aElDExcluido = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElDExcluido)?.ACCESO ?? false;
+    var aGuDExcluido = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuDExcluido)?.ACCESO ?? false;
+    <input type="hidden" id="aNuDExcluido" value="@aNuDExcluido.ToString()" />
+    <input type="hidden" id="aEdDExcluido" value="@aEdDExcluido.ToString()" />
+    <input type="hidden" id="aElDExcluido" value="@aElDExcluido.ToString()" />
+    <input type="hidden" id="aGuDExcluido" value="@aGuDExcluido.ToString()" />
+    var aNuBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuBeneficio)?.ACCESO ?? false;
+    var aEdBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdBeneficio)?.ACCESO ?? false;
+    var aElBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElBeneficio)?.ACCESO ?? false;
+    var aGuBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuBeneficio)?.ACCESO ?? false;
+    <input type="hidden" id="aNuBeneficio" value="@aNuBeneficio.ToString()" />
+    <input type="hidden" id="aEdBeneficio" value="@aEdBeneficio.ToString()" />
+    <input type="hidden" id="aElBeneficio" value="@aElBeneficio.ToString()" />
+    <input type="hidden" id="aGuBeneficio" value="@aGuBeneficio.ToString()" />
+    var aNuCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuCopago)?.ACCESO ?? false;
+    var aEdCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdCopago)?.ACCESO ?? false;
+    var aElCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElCopago)?.ACCESO ?? false;
+    var aGuCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuCopago)?.ACCESO ?? false;
+    <input type="hidden" id="aNuCopago" value="@aNuCopago.ToString()" />
+    <input type="hidden" id="aEdCopago" value="@aEdCopago.ToString()" />
+    <input type="hidden" id="aElCopago" value="@aElCopago.ToString()" />
+    <input type="hidden" id="aGuCopago" value="@aGuCopago.ToString()" />
+    var aNuRCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuRCopago)?.ACCESO ?? false;
+    var aEdRCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdRCopago)?.ACCESO ?? false;
+    var aElRCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElRCopago)?.ACCESO ?? false;
+    var aGuRCopago = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuRCopago)?.ACCESO ?? false;
+    <input type="hidden" id="aNuRCopago" value="@aNuRCopago.ToString()" />
+    <input type="hidden" id="aEdRCopago" value="@aEdRCopago.ToString()" />
+    <input type="hidden" id="aElRCopago" value="@aElRCopago.ToString()" />
+    <input type="hidden" id="aGuRCopago" value="@aGuRCopago.ToString()" />
+    var aNuCEtario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.NuCEtario)?.ACCESO ?? false;
+    var aEdCEtario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.EdCEtario)?.ACCESO ?? false;
+    var aElCEtario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.ElCEtario)?.ACCESO ?? false;
+    var aGuCEtario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.PlanBeneficio.GuCEtario)?.ACCESO ?? false;
+    <input type="hidden" id="aNuCEtario" value="@aNuRCopago.ToString()" />
+    <input type="hidden" id="aEdCEtario" value="@aEdRCopago.ToString()" />
+    <input type="hidden" id="aElCEtario" value="@aElRCopago.ToString()" />
+    <input type="hidden" id="aGuCEtario" value="@aGuRCopago.ToString()" />
+}
+@if (Model == ControlesVistas.VistaRed)
+{
+    var aNuRed = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.NuRed)?.ACCESO ?? false;
+    var aEdRed = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.EdRed)?.ACCESO ?? false;
+    var aElRed = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.ElRed)?.ACCESO ?? false;
+    var aGuRed = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.GuRed)?.ACCESO ?? false;
+    <input type="hidden" id="aNuRed" value="@aNuRed.ToString()" />
+    <input type="hidden" id="aEdRed" value="@aEdRed.ToString()" />
+    <input type="hidden" id="aElRed" value="@aElRed.ToString()" />
+    <input type="hidden" id="aGuRed" value="@aGuRed.ToString()" />
+    var aNuRedSucursal = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.NuRedSucursal)?.ACCESO ?? false;
+    var aEdRedSucursal = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.EdRedSucursal)?.ACCESO ?? false;
+    var aElRedSucursal = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.ElRedSucursal)?.ACCESO ?? false;
+    var aGuRedSucursal = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Red.GuRedSucursal)?.ACCESO ?? false;
+    <input type="hidden" id="aNuRedSucursal" value="@aNuRedSucursal.ToString()" />
+    <input type="hidden" id="aEdRedSucursal" value="@aEdRedSucursal.ToString()" />
+    <input type="hidden" id="aElRedSucursal" value="@aElRedSucursal.ToString()" />
+    <input type="hidden" id="aGuRedSucursal" value="@aGuRedSucursal.ToString()" />
+
+}
+
+@if (Model == ControlesVistas.VistaBeneficio)
+{
+    var aNuBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Beneficio.NuBeneficio)?.ACCESO ?? false;
+    var aGuBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Beneficio.GuBeneficio)?.ACCESO ?? false;
+    var aEdBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Beneficio.EdBeneficio)?.ACCESO ?? false;
+    var aElBeneficio = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Beneficio.ElBeneficio)?.ACCESO ?? false;
+    <input type="hidden" id="aNuBeneficio" value="@aNuBeneficio.ToString()" />
+    <input type="hidden" id="aGuBeneficio" value="@aGuBeneficio.ToString()" />
+    <input type="hidden" id="aEdBeneficio" value="@aEdBeneficio.ToString()" />
+    <input type="hidden" id="aElBeneficio" value="@aElBeneficio.ToString()" />
+
+}
+
+@if (Model == ControlesVistas.VistaTarifario)
+{
+    var aNuTarifario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Tarifario.NuTarifario)?.ACCESO ?? false;
+    var aGuTarifario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Tarifario.GuTarifario)?.ACCESO ?? false;
+    var aEdTarifario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Tarifario.EdTarifario)?.ACCESO ?? false;
+    var aElTarifario = listaControles.FirstOrDefault(x => x.IDOBJDET == ControlesVistas.Tarifario.ElTarifario)?.ACCESO ?? false;
+    <input type="hidden" id="aNuTarifario" value="@aNuTarifario.ToString()" />
+    <input type="hidden" id="aGuTarifario" value="@aGuTarifario.ToString()" />
+    <input type="hidden" id="aEdTarifario" value="@aEdTarifario.ToString()" />
+    <input type="hidden" id="aElTarifario" value="@aElTarifario.ToString()" />
+
+}
+

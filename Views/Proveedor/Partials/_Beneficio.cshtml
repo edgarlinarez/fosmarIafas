@@ -1,0 +1,22 @@
+﻿<div class="container">
+    <form id="frmBeneficio" autocomplete="off">
+        <div class="form-row form-group">
+            <div class="col-6">
+                <span>Proveedor</span>
+                <input type="text" name="txtDatoProveedor" class="form-control form-control-sm disabled" value="Nombre o Razon Social de Proveedor" readonly="readonly" />
+            </div>
+            <div class="col-6">
+                <span>Sucursal</span>
+                <input type="text" id="txtDatoProvSucursal" class="form-control form-control-sm disabled" value="Nombre o Razon Social de Proveedor" readonly="readonly" />
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <div class="col-3">
+                <button type="button" class="btn btn-primary btn-xs" id="btnNuBeneficio" data-toggle="modal" data-target="#mdlBuscarBeneficio"><i class="la la-plus mr-1 font-weight-bold"></i>Agregar Beneficio</button>
+            </div>
+        </div>
+        <div class="form-row form-group">
+            <table id="dtBeneficioSrcl" class="table table-striped table-bordered"></table>
+        </div>
+    </form>
+</div>

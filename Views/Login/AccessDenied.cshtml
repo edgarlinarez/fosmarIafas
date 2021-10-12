@@ -1,0 +1,8 @@
+﻿@model string 
+@{
+    ViewData["Title"] = "Acceso denegado";
+    Layout = "/Views/Shared/_LayoutError.cshtml";
+}
+<h2 class="text-center">Acceso denegado</h2>
+<p class="text-center">No tienes acceso a esta ruta.</p>
+<a href="@Model">Regresar</a>

@@ -1,0 +1,358 @@
+﻿<div class="card border-right border-bottom border-left">
+    <div class="container mt-3">
+        <div class="form-row">
+            <div class="col-lg-6 pt-2">
+                <h5 id="titlePlan">Nuevo Plan</h5>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-row">
+                    <div class="col-lg-7 offset-md-5 text-right">
+                        <button id="btnGrPlanBeneficio" type="button" class="btn btn-primary btn-xs"><i class="fa fa-save mr-1"></i> Grabar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="dropdown-divider bg-warning border-bottom border-warning mt-1">
+        <div class="container">
+            <form id="FormularioPlanBeneficio" autocomplete="off">
+                <div class="form-row form-group">
+                    <div class="col-2">
+                        <span>Nro. Plan</span>
+                        <input type="hidden" id="hfNumPlanBeneficio">
+                        <input type="text" id="txtNumeroPlanBeneficio" name="txtNumeroPlanBeneficio" class="form-control form-control-sm text-right disabled" readonly="readonly">
+
+                    </div>
+                    <div class="col-6">
+                        <span>Descripción</span>
+                        <input type="hidden" id="hfDscrpcnBeneficio">
+                        <input type="text" id="txtDescripcionPB" name="txtDescripcionPB" class="form-control form-control-sm text-uppercase alfaNumCharEsp" maxlength="150">
+                    </div>
+                    <div class="col-4">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <span>Moneda del Plan</span>
+                                <select id="cboMonedaPlan" name="cboMonedaPlan" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col-6">
+                                <span>Moneda de Prima</span>
+                                <select id="cboMonedaPrima" name="cboMonedaPrima" class="form-control form-control-sm"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-4">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <span>Prima Incluye IGV</span>
+                                <select id="cboPrimaIGV" name="cboPrimaIGV" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col-6">
+                                <span>Producto Interno</span>
+                                <select id="cboProductoInterno" name="cboProductoInterno" class="form-control form-control-sm"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <span>Tipo Plan</span>
+                                <select id="cboTipoPlan" name="cboTipoPlan" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col-6">
+                                <span>Tipo Régimen</span>
+                                <select id="cboTipoRegimen" name="cboTipoRegimen" class="form-control form-control-sm"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <span>Ind. Regafi</span>
+                                <select id="cboIndRegafi" name="cboIndRegafi" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col-6">
+                                <span>Costo Plan</span>
+                                <select id="cboCostoPlan" name="cboCostoPlan" class="form-control form-control-sm"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="form-row form-group">
+                <div class="col-4">
+                    <div class="form-row">
+                        <div class="col-lg-6">
+                            <span>Latencia</span>
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text px-2 py-0">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="custom-control custom-checkbox px-2 py-0">
+                                                <input type="checkbox" id="chkLatencia" name="cantidadLatencia" class="custom-control-input">
+                                                <label class="custom-control-label" for="chkLatencia"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="number" id="txtCantidadMesesLa" name="txtCantidadMesesLa" maxlength="2" min="0" max="12" step="1" class="form-control form-control-sm text-right pr-1" placeholder="0" readonly />
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">Meses</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <span>Carencia</span>
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text px-2 py-0">
+                                        <div class="d-flex justify-content-center">
+                                            <div class="custom-control custom-checkbox px-2 py-0">
+                                                <input type="checkbox" id="chkCarencia" name="cantidadCarencia" class="custom-control-input">
+                                                <label class="custom-control-label" for="chkCarencia"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="number" id="txtCantidadMesesCa" name="txtCantidadMesesCa" maxlength="2" min="0" max="12" step="1" class="form-control form-control-sm text-right pr-1" placeholder="0" readonly />
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2">Meses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <span>Cobertura por Edad de Servicio</span><div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text px-2 py-0">
+                                <div class="d-flex justify-content-center">
+                                    <div class="custom-control custom-checkbox px-2 py-0">
+                                        <input type="checkbox" id="chkCoberturaxEdad" name="CoberturaxEdad" class="custom-control-input">
+                                        <label class="custom-control-label" for="chkCoberturaxEdad"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text px-1" id="basic-addon1">Hombre</span>
+                        </div>-->
+                @*<input type="number" id="txtCantidadAñosHombre" name="txtCantidadAñosHombre" maxlength="3" min="0" max="120" step="1" class="form-control form-control-sm text-right pr-1 solonumeros" placeholder="0" readonly>*@
+                <!--<input type="number" id="txtCantidadAñosHombre" name="txtCantidadAñosHombre" maxlength="3" min="0" max="120" step="1" class="form-control form-control-sm text-right pr-1" placeholder="0" readonly>
+
+                            <div class="input-group-append">
+                                <span class="input-group-text px-2" id="basic-addon2">Años</span>
+                            </div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text px-1" id="basic-addon1">Mujer</span>
+                            </div>
+                            <input type="number" id="txtCantidadAñosMujer" name="txtCantidadAñosMujer" maxlength="3" min="0" max="120" step="1" class="form-control form-control-sm px-1 text-right pr-1" placeholder="0" readonly>
+                            <div class="input-group-append">
+                                <span class="input-group-text px-2" id="basic-addon2">Años</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="form-row form-group">
+                    <div class="col-2">
+                        <span>Parentesco</span>
+                        <select id="cboParentesco" name="cboParentesco" class="form-control form-control-sm valid" aria-invalid="false"></select>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <span>Latencia</span>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-checkbox px-2 py-0">
+                                                    <input type="checkbox" id="chkLatencia" name="cantidadLatencia" class="custom-control-input">
+                                                    <label class="custom-control-label" for="chkLatencia"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="number" id="txtCantidadMesesLa" name="txtCantidadMesesLa" maxlength="2" min="1" max="12" step="1" class="form-control form-control-sm text-right pr-1 solonumeros" placeholder="0" readonly="" disabled="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Meses</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <span>Carencia</span>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-checkbox px-2 py-0">
+                                                    <input type="checkbox" id="chkCarencia" name="cantidadCarencia" class="custom-control-input">
+                                                    <label class="custom-control-label" for="chkCarencia"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="number" id="txtCantidadMesesCa" name="txtCantidadMesesCa" maxlength="2" min="1" max="12" step="1" class="form-control form-control-sm text-right pr-1 solonumeros" placeholder="0" readonly="" disabled="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">Meses</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                                <span>Cobertura por Edad de Servicio</span>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-checkbox px-2 py-0">
+                                                    <input type="checkbox" id="chkCoberturaxEdad" name="CoberturaxEdad" class="custom-control-input">
+                                                    <label class="custom-control-label" for="chkCoberturaxEdad"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text px-1" id="basic-addon1">Hombre</span>
+                                    </div>
+                                    <input type="number" id="txtCantidadAñosHombre" name="txtCantidadAñosHombre" maxlength="3" min="1" max="120" step="1" class="form-control form-control-sm text-right pr-1 solonumeros" placeholder="0" readonly="" disabled="">
+
+                                    <div class="input-group-append">
+                                        <span class="input-group-text px-2" id="basic-addon2">Años</span>
+                                    </div>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text px-1" id="basic-addon1">Mujer</span>
+                                    </div>
+                                    <input type="number" id="txtCantidadAñosMujer" name="txtCantidadAñosMujer" maxlength="3" min="1" max="120" step="1" class="form-control form-control-sm px-1 text-right pr-1 solonumeros" placeholder="0" readonly="" disabled="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text px-2" id="basic-addon2">Años</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <span>Estado Titular</span><select id="cboEstdoTitular" name="cboEstdoTitular" class="form-control form-control-sm"></select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col-2">
+                        <span>Invalidez</span>
+                        <select id="cboInvalidez" name="cboInvalidez" class="form-control form-control-sm"></select>
+                    </div><div class="col-4">
+                        <div class="form-row">
+                            <div class="col-6">
+                                <span>Actividad de Servicio</span>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-radio px-2 py-0">
+                                                    <input type="radio" id="chkasSI" name="chkAServicio" class="custom-control-input" value="1">
+                                                    <label class="custom-control-label" for="chkasSI"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text px-3" id="basic-addon2">Si</span>
+                                    </div>
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-radio px-2 py-0">
+                                                    <input type="radio" id="chkasNo" name="chkAServicio" class="custom-control-input" value="2">
+                                                    <label class="custom-control-label" for="chkasNo"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text px-3" id="basic-addon2">No</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <span>Limite de Edad</span>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-radio px-2 py-0">
+                                                    <input type="radio" id="chkLEdadSi" name="chkLEdad" class="custom-control-input" value="1">
+                                                    <label class="custom-control-label" for="chkLEdadSi"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group-append">
+                                        <span class="input-group-text px-3" id="basic-addon2">Si</span>
+                                    </div>
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text px-2 py-0">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="custom-control custom-radio px-2 py-0">
+                                                    <input type="radio" id="chkLEdadNo" name="chkLEdad" class="custom-control-input" value="2">
+                                                    <label class="custom-control-label" for="chkLEdadNo"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text px-3" id="basic-addon2">No</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-row">
+
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-row">
+
+
+                        </div>
+                    </div>
+                </div>
+                <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+            </form>
+            <hr class="dropdown-divider bg-warning mt-1 mb-3">
+        </div>
+
+        @*agregado*@
+
+        <div class="container">
+            <ul class="nav nav-pills" id="tabVersionDiagnostico">
+                <li class="nav-item">
+                    <a class="nav-link active py-1 px-3 mr-1" id="ListarVersionPB-tab" href="#ListarVersionPB" data-toggle="tab" role="tab">Versión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link py-1 px-3 mr-1" id="Diagnostico-tab" href="#Diagnostico" data-toggle="tab" role="tab">Diagnósticos Excluidos</a>
+                </li>
+            </ul>
+            <hr class="dropdown-divider bg-warning mt-1 mb-3">
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="ListarVersionPB" role="tabpanel">
+                    <partial name="Partials/_ListarVersionPB" />
+                </div>
+                <div class="tab-pane fade" id="Diagnostico" role="tabpanel">
+                    <partial name="Partials/_Diagnostico" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="hfNuevaVersionPB" />
+<input type="hidden" id="hfNuevoDiagnosticoExcl" />
+
+<input type="hidden" id="hfNuevoBeneficioPB" />
+

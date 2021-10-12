@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+@section Styles{
+    <link asp-append-version="true" href="~/css/views/home.css" rel="stylesheet" />
+}
+<div class="nGrid home col-lg-8 col-md-8 col-sm-10 col-xs-12">
+    <div class="ctWelcome">
+        <div class="box-ctWelcome">
+            <div class="col-lg-6 lflt ctborder ">
+                <div class="txtWelcome">Bienvenido(a)</div>
+                <div class="pt2 txtNmUsuario"><label id="lblNmUsuario" name="lblNmUsuario" class="required-form-label" style=" color: #fff;"> @User.GetFullName()</label> </div>
+                <div class="pt2 txtNmUsu"> <label id="lblNmUsu" name="lblNmUsu" class="required-form-label" style=" color: #fff; "> @User.GetUserCode() </label> </div>
+                <div class="pt2 txtOtros">
+                    <div class="colmn55 lflt ltxt">Fecha :</div>
+                    <div class="colmn100 rtxt">
+                        <label id="lblfecha" name="lblfecha" class="required-form-label" style=" color: #fff; ">  </label>
+                    </div>
+                    <div class="brk"></div>
+                </div>
+                <div class="pt2 txtOtros">
+                    <div class="colmn55 lflt ltxt">Hora :</div>
+                    <div class="colmn100 rtxt">
+                        <label id="lblhora" name="lblhora" class="required-form-label" style=" color: #fff; ">  </label>
+                    </div>
+                    <div class="brk"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 lflt">
+                <img src="~/assets/css/themes/@FOSMAR.CONFIG.ConfiguracionProyecto.TEMA/img/logo.png" />
+            </div>
+            <div class="brk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="initModalSucursales" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="initModalSucursales" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Seleccione sucursal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <select class="form-control form-control-sm select-sucursal-header">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-selc-sucursal" type="button" class="btn btn-primary btn-xs">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    @if ((bool)ViewBag.MostrarModalSucursales)
+    {
+        <script>
+            $("#btn-selc-sucursal").on("click", function () {
+                $.ajax({
+                    url: `/guardar-sucursal-seleccionada`,
+                    type: "POST",
+                    data: {
+                        id: $('#initModalSucursales').find(".select-sucursal-header").val()
+                    }
+                })
+                    .done(function () {
+                        $("#initModalSucursales").modal("hide");
+                        $(".select-sucursal-header-1").val($('#initModalSucursales').find(".select-sucursal-header").val());
+                    });
+            });
+            $('#initModalSucursales').modal({ backdrop: 'static', keyboard: false })
+            $("#initModalSucursales").modal("show");
+        </script>
+    }
+    <script asp-append-version="true" src="~/js/views/home/index.js"></script>
+
+}

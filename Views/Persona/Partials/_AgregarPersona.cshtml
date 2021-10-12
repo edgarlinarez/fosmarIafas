@@ -1,0 +1,241 @@
+<input type="hidden" id="hfCodPersona" value="@ViewBag.id" />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-11 px-0">
+            <form id="FormularioPersona" autocomplete="off">
+                <div class="container">
+                    <div class="row">
+                        <div class="col form-group px-1 ">
+                            <span class="required-form-span"> Tipo Persona </span>
+                            <select id="cboTPersonaNJ" name="cboTPersonaNJ" class="form-control form-control-sm"></select>
+                        </div>
+                        <div class="col form-group px-1 pNatural pNaturalAgregando">
+                            <span class="required-form-span"> Tipo Documento</span>
+                            <select id="cboPNTDocumento" name="cboPNTDocumento" class="form-control form-control-sm" disabled></select>
+                        </div>
+                        <div class="col form-group px-1 pNatural pNaturalAgregando">
+                            <span class="required-form-span"> Nro. Documento</span>
+                            <input id="txtPNDocumento" name="txtPNDocumento" class="form-control form-control-sm text-uppercase solonumeros" type="text" disabled>
+                        </div>
+                        <div class="col form-group px-1 ">&nbsp;</div>
+                        <div class="col text-right pt-3 px-1">
+                            <button id="btnConsultaSunat" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#mdlSunat">Consulta Sunat</button>
+                            @if (FOSMAR.CONFIG.ConfiguracionProyecto.CONSULTA_SUSALUD)
+                            {
+                                <button id="btnConsultaSusalud" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#mdlSusalud">Consulta SUSALUD</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="pNatural">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Apellido Paterno </span>
+                                <input id="txtAPaterno" name="txtAPaterno" class="form-control form-control-sm text-uppercase sololetrasyespacios homo" type="text" maxlength="50">
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Apellido Materno </span>
+                                <input id="txtAMaterno" name="txtAMaterno" class="form-control form-control-sm text-uppercase sololetrasyespacios homo" type="text" maxlength="50">
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Apellido Casada </span>
+                                <input id="txtACasada" name="txtACasada" class="form-control form-control-sm text-uppercase sololetrasyespacios" type="text" maxlength="50">
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Primer Nombre </span>
+                                <input id="txtPNombre" name="txtPNombre" class="form-control form-control-sm text-uppercase sololetrasyespacios homo" type="text" maxlength="30">
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Segundo Nombre </span>
+                                <input id="txtSNombre" name="txtSNombre" class="form-control form-control-sm text-uppercase sololetrasyespacios" type="text" maxlength="30">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Estado Civil</span>
+                                <select id="cboECivil" name="cboECivil" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Sexo</span>
+                                <select id="cboSexo" name="cboSexo" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Fecha Nacimiento </span>
+                                <div class="input-group">
+                                    <input id="txtFNacimiento" name="txtFNacimiento" class="form-control form-control-sm formatoFechas" type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="msg0" style="color:red;" class="msg0"></span>
+                                </div>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Fecha Fallecimiento  </span>
+                                <div class="input-group">
+                                    <input id="txtFFallecimiento" name="txtFFallecimiento" class="form-control form-control-sm formatoFechas" type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="msg" style="color:red;" class="msg"></span>
+                                </div>
+                            </div>
+                            <div class="col form-group px-1">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Nacionalidad</span>
+                                <select id="cboNacionalidad" name="cboNacionalidad" class="form-control form-control-sm"></select>
+                            </div>
+                            <div id="PaisNac" class="col form-group px-1">
+                                <span class="required-form-span">País de Nacimiento</span>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text p-2">
+                                            <input type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                    </div>
+                                    <select id="cboPaisNac" name="cboPaisNac" class="form-control form-control-sm"></select>
+                                </div>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Departamento</span>
+                                <select id="cboPDepartamento" name="cboPDepartamento" class="form-control form-control-sm">
+                                </select>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Provincia</span>
+                                <select id="cboPProvincia" name="cboPProvincia" class="form-control form-control-sm">
+                                </select>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Distrito</span>
+                                <select id="cboPDistrito" name="cboDistrito" class="form-control form-control-sm">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pJuridica">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-7 form-group px-1">
+                                <span class="required-form-span">Razon Social</span>
+                                <input id="txtRSocial" name="txtRSocial" class="form-control form-control-sm text-uppercase alfaNumCharEsp" type="text" maxlength="150">
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Tipo Documento</span>
+                                <select id="cboPJTDocumento" name="cboPJTDocumento" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span"> Nro. Documento</span>
+                                <input id="txtPJNDocumento" name="txtPJNDocumento" class="form-control form-control-sm text-uppercase solonumeros" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col form-group px-1">
+                                <span>Tipo Sociedad</span>
+                                <select id="cboPJTSociedad" name="cboPJTSociedad" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col form-group px-1">
+                                <span class="required-form-span">Tipo Empresa</span>
+                                <select id="cboPJTEmpresa" name="cboPJTEmpresa" class="form-control form-control-sm"></select>
+                            </div>
+                            <div class="col-2 form-group px-1">
+                                <span class="required-form-span">F. Inicio Actividades</span>
+                                <div class="input-group">
+                                    <input id="txtPJFNacimiento" name="txtPJFNacimiento" class="form-control form-control-sm " type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <span id="msg0" style="color:red;" class="msg0"></span>
+                                </div>
+
+                            </div>
+                            <div class="col form-group px-1"></div>
+                            <div class="col form-group px-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-right px-1">
+                    <button id="btnGrabarPersona" type="button" class="btn btn-primary btn-xs">Grabar</button>
+                </div>
+                <partial name="/Views/Shared/Partials/_AuditoriaPartial2.cshtml" />
+            </form>
+        </div>
+    </div>
+    <ul class="nav nav-tabs" id="myTab2" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link disabled" id="Documento-tab" data-toggle="tab" href="#Documento" role="tab" aria-controls="profile" aria-selected="true">Documento</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" id="GradoMilitar-tab" data-toggle="tab" href="#GradoMilitar" role="tab" aria-controls="profile" aria-selected="true">Datos de Inter&eacute;s</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" id="Direccion-tab" data-toggle="tab" href="#Direccion" role="tab" aria-controls="profile" aria-selected="true">Dirección</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" id="Telefono-tab" data-toggle="tab" href="#Telefono" role="tab" aria-controls="profile" aria-selected="true">Teléfonos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" id="CuentaCorreo-tab" data-toggle="tab" href="#CuentaCorreo" role="tab" aria-controls="profile" aria-selected="true">Cuenta de Correo</a>
+        </li>
+        @if (FOSMAR.CONFIG.ConfiguracionProyecto.VER_DEPENDIENTES)
+        {
+            <li class="nav-item">
+                <a class="nav-link disabled" id="Dependientes-tab" data-toggle="tab" href="#Dependientes" role="tab" aria-controls="profile" aria-selected="true">Dependientes</a>
+            </li>
+        }
+        <li class="nav-item">
+            <a class="nav-link disabled" id="CuentaBanco-tab" data-toggle="tab" href="#CuentaBanco" role="tab" aria-controls="profile" aria-selected="true">Cuenta de Banco</a>
+        </li>
+    </ul>
+    <div class="tab-content mt-3" id="myTabContent">
+        <div class="tab-pane fade" id="Documento" role="tabpanel" aria-spanledby="Documento-tab">
+            <div class="row">
+                <partial name="Partials/_DocumentoPersona" />
+            </div>
+        </div>
+        <div class="tab-pane fade" id="Direccion" role="tabpanel" aria-spanledby="Direccion-tab">
+            <div class="row">
+                <partial name="Partials/_DireccionPersona" />
+            </div>
+        </div>
+        <div class="tab-pane fade" id="Telefono" role="tabpanel" aria-spanledby="Telefono-tab">
+            <div class="row">
+                <partial name="Partials/_TelefonoPersona" />
+            </div>
+        </div>
+        <div class="tab-pane fade" id="CuentaCorreo" role="tabpanel" aria-spanledby="CuentaCorreo-tab">
+            <div class="row">
+                <partial name="Partials/_CorreoPersona" />
+            </div>
+        </div>
+        <div class="tab-pane fade" id="GradoMilitar" role="tabpanel" aria-spanledby="GradoMilitar-tab">
+            <div class="row">
+                <partial name="Partials/_GradoPersona" />
+            </div>
+        </div>
+        @if (FOSMAR.CONFIG.ConfiguracionProyecto.VER_DEPENDIENTES)
+        {
+            <div id="Dependientes" class="tab-pane fade" role="tabpanel" aria-spanledby="Dependientes-tab">
+                <partial name="Partials/_Dependencia" />
+            </div>
+        }
+        <div class="tab-pane fade" id="CuentaBanco" role="tabpanel" aria-spanledby="CuentaBanco-tab">
+            <div class="row">
+                <partial name="Partials/_ListarCuentaBancoPersona" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<partial name="/Views/Persona/Partials/_BusquedaSusalud.cshtml" />
+<partial name="/Views/Persona/Partials/_BusquedaRUC.cshtml" />
+<partial name="/Views/Persona/Partials/_Homonimo.cshtml" />

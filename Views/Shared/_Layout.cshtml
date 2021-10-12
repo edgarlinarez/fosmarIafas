@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@FOSMAR.CONFIG.ConfiguracionProyecto.PROYECTO - @ViewData["Title"]</title>
+
+    @* TEMA DE STR DASH *@
+
+    <link rel="shortcut icon" type="image/png" href="~/assets/css/themes/@FOSMAR.CONFIG.ConfiguracionProyecto.TEMA/img/favicon.ico">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="~/assets/css/themes/@FOSMAR.CONFIG.ConfiguracionProyecto.TEMA/metisMenu.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" href="~/assets/css/typography.css">
+    <link rel="stylesheet" href="~/assets/css/default-css.css">
+    <link asp-append-version="true" rel="stylesheet" href="~/assets/css/themes/@FOSMAR.CONFIG.ConfiguracionProyecto.TEMA/styles.css">
+    @*<link rel="stylesheet/less" type="text/css" href="@Url.Content("~/assets/css/themes/styles.less")">*@
+
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="~/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    @* TEMA DE STR DASH *@
+
+    <link asp-append-version="true" href="~/lib/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link asp-append-version="true" href="~/lib/line-awesome/css/line-awesome.css" rel="stylesheet" />
+    <link asp-append-version="true" rel="stylesheet" href="~/css/site.css" />
+    @* DatePicker *@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    @*Select2 css*@
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />    
+    <link asp-append-version="true" rel="stylesheet" href="~/assets/css/select2-bootstrap4.min.css">
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div id="preloader2" style="display: none;">
+        <div class="loader2"></div>
+    </div>
+    <div class="page-container">
+        <partial name="Partials/_SideBarPartial.cshtml" />
+        <div class="main-content">
+            <partial name="Partials/_HeaderPartial.cshtml" />
+            <partial name="Partials/_BreadcrumPartial.cshtml" />
+            <div class="main-content-inner">
+                <div class="mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <partial name="Partials/_FooterPartial" />
+
+    @* ---------- SCRIPTS ------------ *@
+    <script asp-append-version="true" src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @* TEMA DE STR DASH *@
+    <!-- bootstrap 4 js -->
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/assets/js/metisMenu.min.js"></script>
+    <script src="~/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="~/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- start zingchart js -->
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <!--<script>
+        zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>-->
+    <!-- all line chart activation -->
+    <script src="~/assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="~/assets/js/pie-chart.js"></script>
+    <!-- others plugins -->
+    <script src="~/assets/js/plugins.js"></script>
+    <script src="~/assets/js/scripts.js"></script>
+    @* TEMA DE STR DASH *@
+
+    <script src="~/lib/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/sweet-alert/sweetalert-210.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/sucursalusuario.js"></script>
+    @*datepicker*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+    @*Select2 js*@
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    @*Plugin Excel*@
+    <script src="~/js/xls/FileSaver.js"></script>
+    <script src="~/js/xls/xlsx.full.min.js"></script>
+    @* XmlToJSON js*@
+    <script src="~/assets/js/xmlToJson.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" asp-append-version="true">
+    $(function () {
+        $(document).ajaxError(function (e, xhr, settings) {
+            if (xhr.status == 401) {
+                location = '@Url.Action( "", "Login" )';
+            }
+        });
+    });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
